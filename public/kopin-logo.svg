@@ -1,0 +1,7 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="100" fill="#16A34A"/>
+<path d="M60 70V130H70V110H90V130H100V70H90V100H70V70H60Z" fill="white"/>
+<path d="M110 70V130H120V110H140C150 110 158 102 158 92V88C158 78 150 70 140 70H110ZM120 80H140C144 80 148 84 148 88V92C148 96 144 100 140 100H120V80Z" fill="white"/>
+<path d="M60 140H140V150H60V140Z" fill="white"/>
+<text x="100" y="170" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">KOPIN</text>
+</svg>

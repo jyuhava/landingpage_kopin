@@ -1,0 +1,472 @@
+{
+  "navbar": {
+    "logo": {
+      "title": "KOPIN",
+      "subtitle": "International Islamic Education Consortium"
+    },
+    "topBar": {
+      "email": "info@kopinindonesia.org",
+      "phone": "+62 821-1808-7397",
+      "eventInfo": "EduNation Fest: August 29-31, 2025"
+    },
+    "menu": {
+      "about": "About",
+      "benefits": "Benefits",
+      "edunation": "EduNation Fest",
+      "agenda": "Agenda",
+      "contact": "Contact",
+      "register": "Register Now"
+    },
+    "submenu": {
+      "agenda": "Agenda",
+      "fgd1": "FGD 1",
+      "fgd2": "FGD 2", 
+      "fgd3": "FGD 3"
+    }
+  },
+  "hero": {
+    "loading": "Loading...",
+    "consortium": {
+      "subtitle": "International Consortium",
+      "established": "Est. 2025"
+    },
+    "title": "International Islamic",
+    "titleHighlight": "Education Consortium",
+    "description": "Building a collaborative Islamic education ecosystem with global standards for a brighter future",
+    "buttons": {
+      "learnMore": "Learn More",
+      "contact": "Contact Us"
+    },
+    "declaration": {
+      "badge": "Official Declaration",
+      "title": "International Islamic",
+      "titleSecondLine": "Education Consortium",
+      "date": "September 05, 2025",
+      "venue": "Hall A ICE BSD City",
+      "countdown": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds"
+      },
+      "register": "Register & Join Now!"
+    },
+    "scroll": "Scroll"
+  },
+  "about": {
+    "loading": "Loading image...",
+    "badge": "About KOPIN",
+    "title": "Overview of",
+    "titleHighlight": "KOPIN",
+    "content": {
+      "paragraph1": "In facing global dynamics and strengthening the existence of international standard Islamic education, a shared platform is needed that can encourage synergy between institutions.",
+      "highlight1": "shared platform",
+      "paragraph2": "The International Islamic Education Consortium (KOPIN) is present as a strategic step to form a collaborative ecosystem among A-accredited Islamic schools/pesantren with global standards in Indonesia.",
+      "highlight2": "collaborative ecosystem",
+      "paragraph3": "Through this forum, it is hoped that productive cooperation will be built in various fields, such as curriculum development, student and teacher exchange, collaborative research, and promotion of Indonesian Islamic education at the international level.",
+      "highlight3": "productive cooperation"
+    },
+    "keyFeatures": {
+      "title": "KOPIN Main Focus",
+      "items": {
+        "curriculum": "Curriculum Development",
+        "exchange": "Student & Teacher Exchange",
+        "research": "Collaborative Research",
+        "promotion": "International Promotion"
+      }
+    },
+    "imageCaption": "Global Standard Islamic Education"
+  },
+  "benefits": {
+    "badge": "KOPIN Excellence",
+    "title": "Benefits of Joining",
+    "titleHighlight": "KOPIN",
+    "description": "Join the leading Islamic education network to enhance the quality, credibility, and global reach of your institution",
+    "items": {
+      "curriculum": {
+        "title": "International Curriculum",
+        "description": "Institutions can adopt international curricula to improve the quality and relevance of education with global standards."
+      },
+      "reputation": {
+        "title": "Enhanced Reputation",
+        "description": "Institution reputation and credibility increase significantly, attracting interest from parents, students, and quality educators."
+      },
+      "collaboration": {
+        "title": "Global Collaboration",
+        "description": "Opportunities for international collaboration through exchange programs, joint research, and strategic partnerships with leading institutions."
+      },
+      "training": {
+        "title": "Professional Training",
+        "description": "Teachers and staff receive internationally certified training to enhance professionalism and global competence."
+      },
+      "expansion": {
+        "title": "Service Expansion",
+        "description": "Institutions can expand services with international programs, opening opportunities for branches in various strategic areas."
+      },
+      "competitiveness": {
+        "title": "Global Competitiveness",
+        "description": "Competitiveness increases drastically with the ability to attract international students and access global funding."
+      }
+    },
+    "cta": {
+      "title": "Be Part of the Transformation",
+      "titleSecondLine": "of Global Islamic Education",
+      "description": "Together with KOPIN, realize the vision of world-class Islamic schools that have a positive and sustainable global impact",
+      "button": "Join Now",
+      "logoText": {
+        "name": "KOPIN",
+        "established": "Est. 2025",
+        "tagline": "Islamic Education"
+      }
+    }
+  },
+  "fgd1": {
+    "badge": "FGD Series",
+    "title": "FGD 1 Highlights:",
+    "titleHighlight": "Towards International Standards",
+    "date": "November 30, 2024",
+    "type": "Focus Group Discussion",
+    "description": "This Focus Group Discussion (FGD) aims to identify strategic steps that can be taken by Islamic schools in the process towards international standards. This FGD also serves as a platform for exchange of ideas, experiences, and strategies from various Islamic schools that have or are moving towards that stage.",
+    "highlight1": "identify strategic steps",
+    "highlight2": "exchange of ideas, experiences, and strategies",
+    "gallery": {
+      "title": "Activity Documentation",
+      "loading": "Loading gallery...",
+      "images": [
+        {
+          "id": 1,
+          "url": "https://kopinindonesia.org/foto_fgd_1.JPG",
+          "alt": "FGD 1 - Opening Session",
+          "caption": "FGD 1 Opening: Towards International Standards"
+        },
+        {
+          "id": 2,
+          "url": "https://kopinindonesia.org/foto_fgd_2.jpeg",
+          "alt": "FGD 1 - Group Discussion",
+          "caption": "Group Discussion on Standards Development"
+        },
+        {
+          "id": 3,
+          "url": "https://kopinindonesia.org/foto_fgd_3.jpeg",
+          "alt": "FGD 1 - Presentation",
+          "caption": "Islamic Education Strategy Presentation"
+        },
+        {
+          "id": 4,
+          "url": "https://kopinindonesia.org/foto_fgd_4.jpeg",
+          "alt": "FGD 1 - Interactive Session",
+          "caption": "Interactive Experience Sharing Session"
+        },
+        {
+          "id": 5,
+          "url": "https://kopinindonesia.org/foto_fgd_5.jpeg",
+          "alt": "FGD 1 - Panel Discussion",
+          "caption": "Expert Panel Discussion on Education"
+        },
+        {
+          "id": 6,
+          "url": "https://kopinindonesia.org/foto_fgd_6.JPG",
+          "alt": "FGD 1 - Closing Ceremony",
+          "caption": "FGD 1 Closing and Conclusions"
+        }
+      ]
+    },
+    "nextEvent": {
+      "label": "Next: FGD 2",
+      "date": "May 21, 2025"
+    }
+  },
+  "fgd2": {
+    "badge": "May 21, 2025",
+    "title": "FGD 2:",
+    "titleHighlight": "Building World-Class Islamic Education",
+    "description": "This topic discusses the internationalization strategy of Islamic education to be able to compete globally without losing Islamic identity. It provides insights on how Islamic educational institutions can develop relevant and inclusive curricula, strengthen teacher and management quality, and forge global partnerships to build superior, adaptive, and sustainable Islamic education at the international level.",
+    "highlight1": "internationalization strategy of Islamic education",
+    "highlight2": "develop relevant and inclusive curricula",
+    "speakers": {
+      "title": "Speakers & Moderator",
+      "data": [
+        {
+          "id": 1,
+          "url": "https://kopinindonesia.org/narasumber_fgd.jpg",
+          "alt": "Prof. Muhammad Zuhdi M.Ed., Ph.D.",
+          "name": "Prof. Muhammad Zuhdi M.Ed., Ph.D.",
+          "role": "Main Speaker",
+          "description": "Prof. Zuhdi is a Professor of Education at UIN Syarif Hidayatullah Jakarta, a graduate of University of New South Wales and McGill University. He has served as Education Director of Jalan Sesama (Sesame Street Indonesia), Editor-in-Chief of Tarbiya Journal, and advisor to UNESCO and the Ministry of Religious Affairs of Indonesia. His research focus includes Islamic education, inclusion, and student welfare, published in international journals. In 2011, he received the Australian Alumni Award for Excellence in Education from the Australian Embassy.",
+          "expertise": ["Islamic Education", "UNESCO Advisor", "McGill University"]
+        },
+        {
+          "id": 2,
+          "url": "https://kopinindonesia.org/moderator_fgd.jpg",
+          "alt": "Dr. Supangat, MA",
+          "name": "Dr. Supangat, MA",
+          "role": "Moderator",
+          "description": "Dr. Supangat, MA is a national trainer, postgraduate lecturer, and Islamic school manager with more than 20 years of experience in developing quality-based, character-driven, and innovative Islamic education. With academic background from UIN Sunan Kalijaga, UGM, McGill University, and Sydney University, he actively trains teachers, develops curricula, and leads prominent Islamic schools. His works in critical education, active learning, and school management serve as references in various educational institutions in Indonesia.",
+          "expertise": ["National Training", "School Management", "Curriculum Development"]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Activity Documentation",
+      "loading": "Loading gallery...",
+      "images": [
+        {
+          "id": 1,
+          "url": "https://kopinindonesia.org/fgd_2_1.jpeg",
+          "alt": "FGD 2 - Opening Session",
+          "caption": "FGD 2 Opening: Building World-Class Islamic Education"
+        },
+        {
+          "id": 2,
+          "url": "https://kopinindonesia.org/fgd_2_2.jpeg",
+          "alt": "FGD 2 - Keynote Presentation",
+          "caption": "Keynote Presentation on Internationalization Strategy"
+        },
+        {
+          "id": 3,
+          "url": "https://kopinindonesia.org/fgd_2_3.jpeg",
+          "alt": "FGD 2 - Group Discussion",
+          "caption": "Group Discussion on Global Curriculum Development"
+        },
+        {
+          "id": 4,
+          "url": "https://kopinindonesia.org/fgd_2_4.jpeg",
+          "alt": "FGD 2 - Interactive Workshop",
+          "caption": "Interactive Workshop on Global Partnerships"
+        },
+        {
+          "id": 5,
+          "url": "https://kopinindonesia.org/fgd_2_5.jpeg",
+          "alt": "FGD 2 - Panel Discussion",
+          "caption": "Panel Discussion on Islamic Identity in Global Education"
+        },
+        {
+          "id": 6,
+          "url": "https://kopinindonesia.org/fgd_2_6.jpeg",
+          "alt": "FGD 2 - Closing & Action Plan",
+          "caption": "FGD 2 Closing and Action Plan"
+        }
+      ]
+    },
+    "nextEvent": {
+      "label": "Next: FGD 3",
+      "date": "May 29, 2025 - IB Programme Implementation"
+    }
+  },
+  "fgd3": {
+    "badge": "May 29, 2025",
+    "title": "FGD 3:",
+    "titleHighlight": "From Vision to Action",
+    "titleSubtitle": "Leading the Implementation of the IB Programme",
+    "description1": "In order to strengthen synergy and strategic leadership in the implementation of the International Baccalaureate (IB) Programme, this Focused Group Discussion (FGD) carries the theme \"From Vision to Action: Leading the Implementation of the IB Programme.\"",
+    "highlight1": "synergy and strategic leadership",
+    "description2": "This activity aims to serve as a platform for exchange of ideas, strategies, and best practices in directing the global education vision into concrete actions in educational institutions. Stakeholders—including principals, IB coordinators, learning facilitators, and other related parties—will engage in in-depth discussions regarding challenges, opportunities, and transformative leadership approaches in the context of IB program implementation.",
+    "highlight2": "exchange of ideas, strategies, and best practices",
+    "speaker": {
+      "title": "Keynote Speaker",
+      "data": {
+        "id": 1,
+        "url": "https://kopinindonesia.org/Faizol_musa.JPG",
+        "alt": "Mr. Faizol Musa",
+        "name": "Mr. Faizol Musa",
+        "role": "Former Acting Head of Development for Asia-Pacific at IB",
+        "description": "Faizol Musa is an international education expert with more than 20 years of experience in K-12 and higher education. He previously served as Acting Head of Development for the Asia-Pacific region at International Baccalaureate (IB), and is now a member of the Board of Directors at Manipal GlobalNxt University. His expertise includes IB curriculum development (DP, MYP, CP), education market expansion, and cross-country institutional accreditation. Experienced in leading strategic projects in South and Southeast Asia, Faizol is also active in policy advocacy, global partnerships (with Microsoft, ACCA, Arizona State University), and edtech innovation. His expertise in project management, strategic finance, and organizational development makes him a key figure in global education transformation.",
+        "expertise": ["IB Programme Development", "Asia-Pacific Leadership", "Global Partnerships", "Educational Innovation"]
+      }
+    },
+    "gallery": {
+      "title": "Activity Documentation",
+      "loading": "Loading gallery...",
+      "images": [
+        {
+          "id": 1,
+          "url": "https://kopinindonesia.org/fgd_3_1.JPG",
+          "alt": "FGD 3 - Opening Ceremony",
+          "caption": "FGD 3 Opening: From Vision to Action IB Programme"
+        },
+        {
+          "id": 2,
+          "url": "https://kopinindonesia.org/fgd_3_2.JPG",
+          "alt": "FGD 3 - Keynote by Faizol Musa",
+          "caption": "Keynote by Mr. Faizol Musa on IB Implementation"
+        },
+        {
+          "id": 3,
+          "url": "https://kopinindonesia.org/fgd_3_3.JPG",
+          "alt": "FGD 3 - Leadership Workshop",
+          "caption": "Leadership Workshop in IB Programme"
+        },
+        {
+          "id": 4,
+          "url": "https://kopinindonesia.org/fgd_3_4.JPG",
+          "alt": "FGD 3 - Strategic Planning",
+          "caption": "Strategic Planning Implementation Session"
+        },
+        {
+          "id": 5,
+          "url": "https://kopinindonesia.org/fgd_3_5.JPG",
+          "alt": "FGD 3 - Collaborative Discussion",
+          "caption": "Collaborative Discussion of Education Practitioners"
+        },
+        {
+          "id": 6,
+          "url": "https://kopinindonesia.org/fgd_3_6.jpeg",
+          "alt": "FGD 3 - Action Plan Presentation",
+          "caption": "Action Plan Presentation and Closing"
+        }
+      ]
+    },
+    "completion": {
+      "title": "FGD Series Completed",
+      "subtitle": "Transforming Islamic Education Together"
+    }
+  },
+  "eduNationFest": {
+    "loading": "Loading...",
+    "data": {
+      "id": 1,
+      "url": "https://kopinindonesia.org/EduNation_Utama.png",
+      "alt": "EduNation Fest 2025",
+      "title": "EduNation Fest 2025",
+      "subtitle": "Towards Golden Indonesia & Global Education",
+      "date": "August 29-31, 2025",
+      "location": "Hall 8 ICE BSD City",
+      "description": "International Islamic education exhibition to be held on August 29-31, 2025 at Hall 8 ICE BSD City."
+    },
+    "about": {
+      "title": "About EduNation Fest",
+      "description": "EduNation Fest will be a dynamic and inclusive platform to encourage the development of the education sector in Indonesia, promoting educational institutions through active roles from all institutions in innovative and creative ways."
+    },
+    "objectives": {
+      "title": "Launch Objectives",
+      "items": [
+        "Socialize KOPIN's vision and strategic direction as a collaborative platform for national and international Islamic educational institutions.",
+        "Explore ideas and best practices to build world-class, relevant, and Quranic values-based Islamic education.",
+        "Encourage synergy between institutions through curriculum collaboration, student/teacher exchanges, and institutional cooperation."
+      ]
+    },
+    "actions": {
+      "register": "Register Now",
+      "followInstagram": "Follow us on Instagram @edunationfest"
+    }
+  },
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Find the latest information and news about KOPIN and EduNation Fest.",
+    "articles": [
+      {
+        "title": "EduNation Fest 2025: International Islamic Education Exhibition",
+        "excerpt": "Technological developments, especially artificial intelligence (AI), have fundamentally changed the way humans work, learn, and live. In the midst of the rapid flow of global change, the world of education is required to not only ...",
+        "source": "Berita Satu",
+        "date": "Wednesday, May 21, 2025",
+        "link": "https://www.beritasatu.com/network/beritakotaid/569664/edunation-fest-2025-pameran-pendidikan-islam-internasional#google_vignette"
+      },
+      {
+        "title": "EduNation Fest 2025: International Islamic Education Exhibition for Future Generations",
+        "excerpt": "In the midst of rapid technological development, especially artificial intelligence (AI), transformation in the world of education has become inevitable ...",
+        "source": "GENZ.ID",
+        "date": "Wednesday, May 21, 2025",
+        "link": "https://genz.id/edunation-fest-2025-pameran-pendidikan-islam-internasional/"
+      },
+      {
+        "title": "EduNation Fest 2025: International Islamic Education Exhibition",
+        "excerpt": "Technological developments, especially artificial intelligence (AI), have fundamentally changed the way humans work, learn, and live. In the midst of the rapid flow of global change, the world of education is required to not only ...",
+        "source": "beritakota.id",
+        "date": "Wednesday, May 21, 2025",
+        "link": "https://beritakota.id/edunation-fest-2025-pameran-pendidikan-islam-internasional/"
+      }
+    ],
+    "readMore": "Read More",
+    "viewMore": "View More News",
+    "imageAlt": "EduNation Fest 2025"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Let's collaborate to build a better future for Islamic education. Contact us for more information about KOPIN and EduNation Fest 2025.",
+    "cards": {
+      "address": {
+        "title": "Office Address",
+        "address": "Grand Galaxy City,\nJl. Boulevard Raya Blok RGF No.16,\nRT.007/RW.018, Jaka Setia,\nKec. Bekasi Sel., Kota Bekasi,\nJawa Barat 17147"
+      },
+      "email": {
+        "title": "Email",
+        "email": "info@kopinindonesia.org",
+        "response": "We will respond within 24 hours"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "phone": "+62 821-1808-7397",
+        "contact": "Urwah - Direct Consultation"
+      }
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Share your questions, suggestions, or collaboration proposals through the form below",
+      "fields": {
+        "name": {
+          "label": "Full Name *",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email *",
+          "placeholder": "name@email.com"
+        },
+        "institution": {
+          "label": "Institution Name",
+          "placeholder": "School/university/organization name"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+62 xxx-xxxx-xxxx"
+        },
+        "subject": {
+          "label": "Subject *",
+          "placeholder": "Select message subject",
+          "options": {
+            "edunation": "EduNation Fest 2025 Information",
+            "membership": "KOPIN Membership",
+            "collaboration": "Collaboration Proposal",
+            "general": "General Inquiry",
+            "other": "Other"
+          }
+        },
+        "message": {
+          "label": "Message *",
+          "placeholder": "Write your message or question in detail..."
+        }
+      },
+      "button": "Send Message"
+    },
+    "social": {
+      "title": "Follow Our Social Media",
+      "accounts": "@kopinindonesia | @edunationfest"
+    }
+  },
+  "footer": {
+    "logo": {
+      "title": "KOPIN",
+      "subtitle": "International Islamic Education Consortium"
+    },
+    "description": "Building global-standard Islamic education through collaboration and innovation to create excellent and character-driven generations.",
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About",
+      "benefits": "Benefits",
+      "edunation": "EduNation Fest",
+      "agenda": "Agenda"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Blog",
+      "faq": "FAQ",
+      "documents": "Documents",
+      "gallery": "Gallery"
+    },
+    "copyright": "© 2025 KOPIN. All rights reserved.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookie Policy"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "heroImages": [
+    {
+      "id": 1,
+      "url": "https://kopinindonesia.org/WhatsApp%20Image%202024-11-30%20at%2010.16.16%20(1).jpeg",
+      "alt": "KOPIN Islamic Education Conference",
+      "caption": "Membangun Pendidikan Islam Berstandar Global"
+    },
+    {
+      "id": 2,
+      "url": "https://kopinindonesia.org/foto_fgd_5.jpeg",
+      "alt": "FGD Focus Group Discussion",
+      "caption": "Forum Diskusi Terarah Pendidikan Islam"
+    },
+    {
+      "id": 3,
+      "url": "https://kopinindonesia.org/fgd_2_3.jpeg",
+      "alt": "FGD 2 Educational Discussion",
+      "caption": "Kolaborasi Membangun Pendidikan Berkelas Dunia"
+    }
+  ],
+  "aboutImage": {
+    "id": 1,
+    "url": "https://kopinindonesia.org/WhatsApp%20Image%202024-11-30%20at%2010.16.16%20(1).jpeg",
+    "alt": "KOPIN About Section",
+    "caption": "Konsorsium Pendidikan Islam Internasional"
+  },
+  "fgd1Images": [
+    {
+      "id": 1,
+      "url": "https://kopinindonesia.org/foto_fgd_1.JPG",
+      "alt": "FGD 1 - Opening Session",
+      "caption": "Pembukaan FGD 1: Menuju Standar Internasional"
+    },
+    {
+      "id": 2,
+      "url": "https://kopinindonesia.org/foto_fgd_2.jpeg",
+      "alt": "FGD 1 - Group Discussion",
+      "caption": "Diskusi Kelompok Pengembangan Standar"
+    },
+    {
+      "id": 3,
+      "url": "https://kopinindonesia.org/foto_fgd_3.jpeg",
+      "alt": "FGD 1 - Presentation",
+      "caption": "Presentasi Strategi Pendidikan Islam"
+    },
+    {
+      "id": 4,
+      "url": "https://kopinindonesia.org/foto_fgd_4.jpeg",
+      "alt": "FGD 1 - Interactive Session",
+      "caption": "Sesi Interaktif Berbagi Pengalaman"
+    },
+    {
+      "id": 5,
+      "url": "https://kopinindonesia.org/foto_fgd_5.jpeg",
+      "alt": "FGD 1 - Panel Discussion",
+      "caption": "Panel Diskusi Para Ahli Pendidikan"
+    },
+    {
+      "id": 6,
+      "url": "https://kopinindonesia.org/foto_fgd_6.JPG",
+      "alt": "FGD 1 - Closing Ceremony",
+      "caption": "Penutupan dan Kesimpulan FGD 1"
+    }
+  ],
+  "fgd2Images": [
+    {
+      "id": 1,
+      "url": "https://kopinindonesia.org/fgd_2_1.jpeg",
+      "alt": "FGD 2 - Opening Session",
+      "caption": "Pembukaan FGD 2: Membangun Pendidikan Islam Berkelas Dunia"
+    },
+    {
+      "id": 2,
+      "url": "https://kopinindonesia.org/fgd_2_2.jpeg",
+      "alt": "FGD 2 - Keynote Presentation",
+      "caption": "Presentasi Utama Strategi Internasionalisasi"
+    },
+    {
+      "id": 3,
+      "url": "https://kopinindonesia.org/fgd_2_3.jpeg",
+      "alt": "FGD 2 - Group Discussion",
+      "caption": "Diskusi Kelompok Pengembangan Kurikulum Global"
+    },
+    {
+      "id": 4,
+      "url": "https://kopinindonesia.org/fgd_2_4.jpeg",
+      "alt": "FGD 2 - Interactive Workshop",
+      "caption": "Workshop Interaktif Kemitraan Global"
+    },
+    {
+      "id": 5,
+      "url": "https://kopinindonesia.org/fgd_2_5.jpeg",
+      "alt": "FGD 2 - Panel Discussion",
+      "caption": "Panel Diskusi Identitas Keislaman dalam Pendidikan Global"
+    },
+    {
+      "id": 6,
+      "url": "https://kopinindonesia.org/fgd_2_6.jpeg",
+      "alt": "FGD 2 - Closing & Action Plan",
+      "caption": "Penutupan dan Rencana Aksi Implementasi"
+    }
+  ],
+  "fgd2Speakers": [
+    {
+      "id": 1,
+      "url": "https://kopinindonesia.org/narasumber_fgd.jpg",
+      "alt": "Prof. Muhammad Zuhdi M.Ed., Ph.D.",
+      "name": "Prof. Muhammad Zuhdi M.Ed., Ph.D.",
+      "role": "Narasumber Utama",
+      "description": "Prof. Zuhdi adalah Guru Besar Pendidikan di UIN Syarif Hidayatullah Jakarta, lulusan University of New South Wales dan McGill University. Ia pernah menjabat sebagai Direktur Pendidikan Jalan Sesama (Sesame Street Indonesia), Pemimpin Redaksi Jurnal Tarbiya, serta penasihat untuk UNESCO dan Kementerian Agama RI. Fokus penelitiannya mencakup pendidikan Islam, inklusi, dan kesejahteraan siswa, yang dipublikasikan di jurnal internasional. Pada tahun 2011, ia meraih Australian Alumni Award for Excellence in Education dari Kedutaan Besar Australia."
+    },
+    {
+      "id": 2,
+      "url": "https://kopinindonesia.org/moderator_fgd.jpg",
+      "alt": "Dr. Supangat, MA",
+      "name": "Dr. Supangat, MA",
+      "role": "Moderator",
+      "description": "Dr. Supangat, MA adalah trainer nasional, dosen pascasarjana, dan pengelola sekolah Islam dengan pengalaman lebih dari 20 tahun dalam pengembangan pendidikan Islam berbasis mutu, karakter, dan inovasi. Berbekal latar belakang akademik dari UIN Sunan Kalijaga, UGM, McGill University, dan Sydney University, beliau aktif melatih guru, mengembangkan kurikulum, dan memimpin sekolah-sekolah Islam ternama. Karya-karyanya di bidang pendidikan kritis, pembelajaran aktif, dan manajemen sekolah menjadi rujukan di berbagai lembaga pendidikan di Indonesia."
+    }
+  ],
+  "fgd3Images": [
+    {
+      "id": 1,
+      "url": "https://kopinindonesia.org/fgd_3_1.JPG",
+      "alt": "FGD 3 - Opening Ceremony",
+      "caption": "Pembukaan FGD 3: From Vision to Action IB Programme"
+    },
+    {
+      "id": 2,
+      "url": "https://kopinindonesia.org/fgd_3_2.JPG",
+      "alt": "FGD 3 - Keynote by Faizol Musa",
+      "caption": "Keynote dari Mr. Faizol Musa tentang Implementasi IB"
+    },
+    {
+      "id": 3,
+      "url": "https://kopinindonesia.org/fgd_3_3.JPG",
+      "alt": "FGD 3 - Leadership Workshop",
+      "caption": "Workshop Kepemimpinan dalam Program IB"
+    },
+    {
+      "id": 4,
+      "url": "https://kopinindonesia.org/fgd_3_4.JPG",
+      "alt": "FGD 3 - Strategic Planning",
+      "caption": "Sesi Perencanaan Strategis Implementasi"
+    },
+    {
+      "id": 5,
+      "url": "https://kopinindonesia.org/fgd_3_5.JPG",
+      "alt": "FGD 3 - Collaborative Discussion",
+      "caption": "Diskusi Kolaboratif Para Praktisi Pendidikan"
+    },
+    {
+      "id": 6,
+      "url": "https://kopinindonesia.org/fgd_3_6.jpeg",
+      "alt": "FGD 3 - Action Plan Presentation",
+      "caption": "Presentasi Rencana Aksi dan Penutupan"
+    }
+  ],
+  "fgd3Speaker": {
+    "id": 1,
+    "url": "https://kopinindonesia.org/Faizol_musa.JPG",
+    "alt": "Mr. Faizol Musa",
+    "name": "Mr. Faizol Musa",
+    "role": "Former Acting Head of Development for Asia-Pacific at IB",
+    "description": "Faizol Musa adalah pakar pendidikan internasional dengan pengalaman lebih dari 20 tahun di jenjang K-12 dan pendidikan tinggi. Ia pernah menjabat sebagai Acting Head of Development untuk kawasan Asia-Pasifik di International Baccalaureate (IB), dan kini menjadi anggota Dewan Direksi Manipal GlobalNxt University. Keahliannya mencakup pengembangan kurikulum IB (DP, MYP, CP), perluasan pasar pendidikan, serta akreditasi institusi lintas negara. Berpengalaman memimpin proyek strategis di Asia Selatan dan Tenggara, Faizol juga aktif dalam advokasi kebijakan, kemitraan global (dengan Microsoft, ACCA, Arizona State University), dan inovasi edtech. Kepiawaiannya dalam manajemen proyek, keuangan strategis, dan pengembangan organisasi menjadikannya figur kunci dalam transformasi pendidikan global."
+  },
+  "eduNationFest": {
+    "id": 1,
+    "url": "https://kopinindonesia.org/EduNation_Utama.png",
+    "alt": "EduNation Fest 2025",
+    "title": "EduNation Fest 2025",
+    "subtitle": "Menuju Indonesia Emas & Pendidikan Global",
+    "date": "29-31 Agustus 2025",
+    "location": "Hall 8 ICE BSD City",
+    "description": "Pameran pendidikan islami internasional yang akan diselenggarakan pada 29-31 Agustus 2025 di Hall 8 ICE BSD City."
+  }
+}
