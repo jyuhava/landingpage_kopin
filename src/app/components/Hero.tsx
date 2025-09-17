@@ -83,7 +83,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section className="relative min-h-screen bg-white overflow-hidden pt-20 md:pt-24">
       {/* Background Image Carousel */}
       <div className="absolute inset-0">
         {heroImages.map((image, index) => (
@@ -107,78 +107,78 @@ export default function Hero() {
       </div>
 
       {/* Navigation Controls */}
-      <div className="absolute top-1/2 left-6 transform -translate-y-1/2 z-20">
+      <div className="absolute top-1/2 left-3 md:left-6 transform -translate-y-1/2 z-20">
         <button
           onClick={prevImage}
-          className="group p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+          className="group p-2 md:p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
         >
-          <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
       </div>
-      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 z-20">
+      <div className="absolute top-1/2 right-3 md:right-6 transform -translate-y-1/2 z-20">
         <button
           onClick={nextImage}
-          className="group p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+          className="group p-2 md:p-3 bg-white/10 backdrop-blur-md rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
         >
-          <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 md:w-6 md:h-6 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 min-h-screen flex items-center pt-4 md:pt-0">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-16 items-center">
             
             {/* Left Column - Main Content */}
-            <div className="text-white space-y-8">
+            <div className="text-white space-y-4 md:space-y-8">
               {/* Logo and Title */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
+              <div className="space-y-3 md:space-y-6">
+                <div className="flex items-center space-x-2 md:space-x-4">
                   <img
                     src="https://kopinindonesia.org/real_logo_kopin.png"
                     alt="KOPIN Logo"
-                    className="h-16 w-auto filter brightness-0 invert"
+                    className="h-8 md:h-16 w-auto filter brightness-0 invert"
                   />
-                  <div className="h-12 w-px bg-white/30"></div>
+                  <div className="h-6 md:h-12 w-px bg-white/30"></div>
                   <div>
-                    <div className="text-emerald-400 font-medium text-sm tracking-wider uppercase">
+                    <div className="text-emerald-400 font-medium text-xs md:text-sm tracking-wider uppercase">
                       {t('hero.consortium.subtitle')}
                     </div>
-                    <div className="text-white/80 text-sm">
+                    <div className="text-white/80 text-xs md:text-sm">
                       {t('hero.consortium.established')}
                     </div>
                   </div>
                 </div>
                 
                 <div>
-                  <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-4">
+                  <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-tight mb-2 md:mb-4">
                     {t('hero.title')}
                     <span className="block text-emerald-400">{t('hero.titleHighlight')}</span>
                   </h1>
-                  <p className="text-xl text-white/80 leading-relaxed max-w-lg">
+                  <p className="text-sm md:text-xl text-white/80 leading-relaxed max-w-lg">
                     {t('hero.description')}
                   </p>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <Link
                   href="#about"
-                  className="group inline-flex items-center px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="group inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-emerald-600 text-white rounded-full text-sm md:text-base font-semibold hover:bg-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
                   {t('hero.buttons.learnMore')}
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="ml-2 w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
                 <Link
                   href="#contact"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white rounded-full text-sm md:text-base font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300"
                 >
                   {t('hero.buttons.contact')}
                 </Link>
@@ -186,35 +186,35 @@ export default function Hero() {
             </div>
 
             {/* Right Column - Declaration Card */}
-            <div className="lg:ml-8">
-              <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20">
-                <div className="text-center space-y-6">
+            <div className="lg:ml-8 mt-6 lg:mt-0">
+              <div className="bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-4 md:p-8 border border-white/20">
+                <div className="text-center space-y-4 md:space-y-6">
                   {/* Declaration Header */}
                   <div className="space-y-2">
-                    <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
-                      <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-emerald-100 text-emerald-700 rounded-full text-xs md:text-sm font-medium">
+                      <svg className="w-3 md:w-4 h-3 md:h-4 mr-1.5 md:mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {t('hero.declaration.badge')}
                     </div>
-                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 leading-tight">
+                    <h2 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 leading-tight">
                       {t('hero.declaration.title')}<br />
                       {t('hero.declaration.titleSecondLine')}
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
+                    <div className="w-12 md:w-16 h-0.5 md:h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mx-auto rounded-full"></div>
                   </div>
 
                   {/* Event Details */}
-                  <div className="bg-gray-50 rounded-xl p-6 space-y-4">
+                  <div className="bg-gray-50 rounded-xl p-3 md:p-6 space-y-3 md:space-y-4">
                     <div className="text-gray-600">
-                      <div className="flex items-center justify-center space-x-2 text-sm">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm">
+                        <svg className="w-3 md:w-4 h-3 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <span>{t('hero.declaration.date')}</span>
                       </div>
-                      <div className="flex items-center justify-center space-x-2 text-sm mt-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex items-center justify-center space-x-2 text-xs md:text-sm mt-1 md:mt-2">
+                        <svg className="w-3 md:w-4 h-3 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
@@ -223,15 +223,15 @@ export default function Hero() {
                     </div>
 
                     {/* Countdown Timer */}
-                    <div className="grid grid-cols-4 gap-3">
+                    <div className="grid grid-cols-4 gap-2 md:gap-3">
                       {[
                         { value: timeLeft.days, label: t('hero.declaration.countdown.days') },
                         { value: timeLeft.hours, label: t('hero.declaration.countdown.hours') },
                         { value: timeLeft.minutes, label: t('hero.declaration.countdown.minutes') },
                         { value: timeLeft.seconds, label: t('hero.declaration.countdown.seconds') }
                       ].map((item, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-sm border p-3">
-                          <div className="text-2xl font-bold text-emerald-600">{item.value}</div>
+                        <div key={index} className="bg-white rounded-lg shadow-sm border p-2 md:p-3">
+                          <div className="text-lg md:text-2xl font-bold text-emerald-600">{item.value}</div>
                           <div className="text-xs text-gray-500 font-medium">{item.label}</div>
                         </div>
                       ))}
@@ -243,11 +243,11 @@ export default function Hero() {
                     href="https://docs.google.com/forms/d/e/1FAIpQLSf-9KQmex5Lzoda2asfK8g2vlmBlzO4s23aHskE9jVa6uilWA/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-4 px-6 rounded-xl font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    className="group block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 md:py-4 px-4 md:px-6 rounded-xl text-sm md:text-base font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                   >
                     <span className="flex items-center justify-center">
                       {t('hero.declaration.register')}
-                      <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="ml-2 w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
                     </span>
