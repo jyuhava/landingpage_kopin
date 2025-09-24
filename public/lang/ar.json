@@ -7,7 +7,7 @@
     "topBar": {
       "email": "info@kopinindonesia.org",
       "phone": "+62 821-1808-7397",
-      "eventInfo": "مهرجان إدو نيشن: ٢٩-٣١ أغسطس ٢٠٢٥"
+      "eventInfo": "مهرجان إدو نيشن: ٧-٩ نوفمبر ٢٠٢٥"
     },
     "menu": {
       "about": "عن المنظمة",
@@ -38,11 +38,11 @@
       "contact": "اتصل بنا"
     },
     "declaration": {
-      "badge": "الإعلان الرسمي",
-      "title": "الاتحاد الدولي للتعليم",
-      "titleSecondLine": "الإسلامي",
-      "date": "٠٥ سبتمبر ٢٠٢٥",
-      "venue": "قاعة أ آيس بي إس دي سيتي",
+      "badge": "مهرجان إديونايشن الدولي للتعليم 2025",
+      "title": "Towards Indonesia Emas &",
+      "titleSecondLine": "Global Education",
+      "date": "٧-٩ نوفمبر ٢٠٢٥",
+      "venue": "Assembly Hall, Jakarta International Convention Center (JICC)",
       "countdown": {
         "days": "أيام",
         "hours": "ساعات",
@@ -329,9 +329,9 @@
       "alt": "مهرجان إدو نيشن ٢٠٢٥",
       "title": "مهرجان إدو نيشن ٢٠٢٥",
       "subtitle": "نحو إندونيسيا الذهبية والتعليم العالمي",
-      "date": "٢٩-٣١ أغسطس ٢٠٢٥",
-      "location": "قاعة ٨ آيس بي إس دي سيتي",
-      "description": "معرض التعليم الإسلامي الدولي الذي سيقام في ٢٩-٣١ أغسطس ٢٠٢٥ في قاعة ٨ آيس بي إس دي سيتي."
+      "date": "٧-٩ نوفمبر ٢٠٢٥",
+      "location": "قاعة التجمع، مركز جاكرتا الدولي للمؤتمرات",
+      "description": "معرض التعليم الإسلامي الدولي الذي سيقام في ٧-٩ نوفمبر ٢٠٢٥ في قاعة التجمع، مركز جاكرتا الدولي للمؤتمرات"
     },
     "about": {
       "title": "حول مهرجان إدو نيشن",
@@ -347,7 +347,8 @@
     },
     "actions": {
       "register": "سجل الآن",
-      "followInstagram": "تابعنا على انستقرام @edunationfest"
+      "followInstagram": "تابعنا على انستقرام @edunationfest",
+      "aboutUs": "معلومات عنا"
     }
   },
   "news": {

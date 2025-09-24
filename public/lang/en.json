@@ -7,7 +7,7 @@
     "topBar": {
       "email": "info@kopinindonesia.org",
       "phone": "+62 821-1808-7397",
-      "eventInfo": "EduNation Fest: August 29-31, 2025"
+      "eventInfo": "EduNation Fest: November 7-9, 2025"
     },
     "menu": {
       "about": "About",
@@ -38,11 +38,11 @@
       "contact": "Contact Us"
     },
     "declaration": {
-      "badge": "Official Declaration",
-      "title": "International Islamic",
-      "titleSecondLine": "Education Consortium",
-      "date": "September 05, 2025",
-      "venue": "Hall A ICE BSD City",
+      "badge": "EduNation International Education Festival 2025",
+      "title": "Towards Indonesia Emas &",
+      "titleSecondLine": "Global Education",
+      "date": "November 7-9, 2025",
+      "venue": "Assembly Hall, Jakarta International Convention Center (JICC)",
       "countdown": {
         "days": "Days",
         "hours": "Hours",
@@ -329,9 +329,9 @@
       "alt": "EduNation Fest 2025",
       "title": "EduNation Fest 2025",
       "subtitle": "Towards Golden Indonesia & Global Education",
-      "date": "August 29-31, 2025",
-      "location": "Hall 8 ICE BSD City",
-      "description": "International Islamic education exhibition to be held on August 29-31, 2025 at Hall 8 ICE BSD City."
+      "date": "November 7-9, 2025",
+      "location": "Assembly Hall, Jakarta International Convention Center (JICC)",
+      "description": "International Islamic education exhibition to be held on November 7-9, 2025 at Assembly Hall, Jakarta International Convention Center (JICC)."
     },
     "about": {
       "title": "About EduNation Fest",
@@ -347,7 +347,8 @@
     },
     "actions": {
       "register": "Register Now",
-      "followInstagram": "Follow us on Instagram @edunationfest"
+      "followInstagram": "Follow us on Instagram @edunationfest",
+      "aboutUs": "About Us"
     }
   },
   "news": {
