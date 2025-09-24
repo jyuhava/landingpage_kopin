@@ -35,7 +35,7 @@ export default function EduNationFest() {
 
   return (
     <section id="edunation" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-emerald-800 mb-4">{festData.title}</h2>
           <div className="w-24 h-1 bg-emerald-600 mx-auto mb-6"></div>
@@ -83,6 +83,14 @@ export default function EduNationFest() {
               </ul>
               
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                  href="/about-edunation"
+                  // target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors text-center"
+                >
+                  {t('eduNationFest.actions.aboutUs')}
+                </a>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSf-9KQmex5Lzoda2asfK8g2vlmBlzO4s23aHskE9jVa6uilWA/viewform"
                   target="_blank"

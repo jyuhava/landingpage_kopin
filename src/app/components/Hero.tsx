@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('2025-09-05T00:00:00').getTime();
+    const targetDate = new Date('2025-11-07T00:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
