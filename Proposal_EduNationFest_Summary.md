@@ -552,11 +552,11 @@ tambahan foto:
 8. Putra Asga Elevri, S.Si., M.Si. : `public\edunation\putra_asga_eevri.png`
 9. Prof. Muhammad Zuhdi M.Ed., Ph.D. : `public\edunation\muhammad_zuhdi.png`
 10. Prof. Maila Dinia Husni Rahiem, M.A., Ph.D. : `public\edunation\maila_dinia.png`
-11. Ustadz Rizal Yuliar Putrananda, Lc. : `public\edunation\rizal_yuliar_putrananda.png`
-12. Ustadz Abdul Aziz Al Owainy, Lc. : `public\edunation\abdul_aziz_al_owainy.png`
-13. Ustadz Mufy Hanif Thalib, Lc. : `public\edunation\mufy_hanif_thalib.png`
-14. Ustadz Abdurrahman Zahier, BBA. : `public\edunation\abdurrahman_zahier.png`
-15. Dr. Abdullah Roy, M.A : `public\edunation\abdullah_roy.png`
+11. Ustadz Rizal Yuliar Putrananda, Lc. : `/edunation/rizal_yuliar_putrananda.png`
+12. Ustadz Abdul Aziz Al Owainy, Lc. : `/edunation/abdul_aziz_al_owainy.png`
+13. Ustadz Mufy Hanif Thalib, Lc. : `/edunation/mufy_hanif_thalib.png`
+14. Ustadz Abdurrahman Zahier, BBA. : `/edunation/abdurrahman_zahier.png`
+15. Dr. Abdullah Roy, M.A : `/edunation/abdullah_roy.png`
 16. Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc. : `/edunation/abduh_tuasikal.png`
 17. Ustadz Abu Yahya Badrusalam, Lc. : `/edunation/abu_yahya_badrussalam.png`
 18. Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK : `/edunation/raehanul_bahrain.png`
