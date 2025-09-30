@@ -14,9 +14,23 @@ export default function ProposalEdunation() {
         
         <div className="relative z-10 text-center text-white max-w-4xl px-4">
           <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-4 border border-green-500/30">
-              Educational International Festival
-            </span>
+            <div className="flex items-center justify-center gap-10 md:gap-14 mb-4">
+              <img 
+                src="/edunation/festival-logo.png" 
+                alt="Educational International Festival Logo" 
+                className="w-40 h-40 md:w-52 md:h-52 object-contain"
+              />
+              <div className="flex items-center gap-4 md:gap-6">
+                <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium border border-green-500/30">
+                  Educational International Festival
+                </span>
+                <img 
+                  src="/edunation/festival-logo-right.png" 
+                  alt="Educational International Festival Logo Right" 
+                  className="w-52 h-52 md:w-64 md:h-64 object-contain"
+                />
+              </div>
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">

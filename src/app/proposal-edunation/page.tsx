@@ -16,9 +16,23 @@ export default function ProposalEduNationPage() {
                         <h1 className="text-5xl font-bold text-white-800 mb-4">
                         Proposal Edu Nation Fest 2025
                         </h1>
-                        <p className="text-2xl text-green-400 font-semibold mb-2">
-                          Educational International Festival
-                        </p>
+                        <div className="flex items-center justify-center gap-10 md:gap-14 mb-2">
+                          <img 
+                            src="/edunation/festival-logo.png" 
+                            alt="Educational International Festival Logo" 
+                            className="w-40 h-40 md:w-60 md:h-60 object-contain"
+                          />
+                          <div className="flex items-center gap-4 md:gap-6">
+                            <p className="text-2xl text-green-400 font-semibold">
+                              Educational International Festival
+                            </p>
+                            <img 
+                              src="/edunation/festival-logo-right.png" 
+                              alt="Educational International Festival Logo Right" 
+                              className="w-52 h-52 md:w-80 md:h-80 object-contain"
+                            />
+                          </div>
+                        </div>
                         <p className="text-xl">
                           "Towards Indonesia Emas & Global Education"
                         </p>

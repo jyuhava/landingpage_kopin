@@ -12,7 +12,7 @@ interface HeroImage {
 }
 
 export default function Hero() {
-  const { t, isLoading: langLoading } = useLanguage();
+  const { language, t, isLoading: langLoading } = useLanguage();
   const [heroImages, setHeroImages] = useState<HeroImage[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [timeLeft, setTimeLeft] = useState({
@@ -240,7 +240,7 @@ export default function Hero() {
 
                   {/* CTA Button */}
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSf-9KQmex5Lzoda2asfK8g2vlmBlzO4s23aHskE9jVa6uilWA/viewform"
+                    href={language === 'ar' ? "https://docs.google.com/forms/d/e/1FAIpQLSf0uHIWlUnXnyyDzWosi6mxasm6wqLcTeNuW77CO_6Qrp116g/viewform" : "https://docs.google.com/forms/d/e/1FAIpQLSf-9KQmex5Lzoda2asfK8g2vlmBlzO4s23aHskE9jVa6uilWA/viewform"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 md:py-4 px-4 md:px-6 rounded-xl text-sm md:text-base font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
