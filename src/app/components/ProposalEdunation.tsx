@@ -1,7 +1,20 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+'use client';
+
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function ProposalEdunation() {
+  const { t, isLoading } = useLanguage();
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Memuat...</p>
+        </div>
+      </div>
+    );
+  }
   return (
     <section className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       {/* Hero Section dengan efek parallax */}
@@ -15,7 +28,7 @@ export default function ProposalEdunation() {
         <div className="relative z-10 text-center text-white max-w-4xl px-4">
           <div className="mb-6">
             <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-4 border border-green-500/30">
-              Educational International Festival
+              {t('hero.declaration.badge')}
             </span>
           </div>
           
@@ -24,15 +37,15 @@ export default function ProposalEdunation() {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">
-            "Towards Indonesia Emas & Global Education"
+            "{t('hero.declaration.title')} {t('hero.declaration.titleSecondLine')}"
           </p>
           
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <p className="text-lg font-semibold">7-9 November 2025</p>
+              <p className="text-lg font-semibold">{t('eduNationFest.data.date')}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <p className="text-lg font-semibold">Assembly Hall, JICC</p>
+              <p className="text-lg font-semibold">{t('eduNationFest.data.location')}</p>
             </div>
           </div>
           
@@ -58,56 +71,43 @@ export default function ProposalEdunation() {
                       className="w-64 h-64 rounded-2xl shadow-lg object-cover"
                     />
                     <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Ketua KOPIN
+                      {t('proposal.greetings.position')}
                     </div>
                   </div>
                 </div>
                 <div className="md:w-2/3">
                   <h2 className="text-4xl font-bold text-gray-800 mb-6 relative inline-block">
-                    GREETINGS
+                    {t('proposal.greetings.title')}
                     <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
                   </h2>
                   
-                  <p className="text-sm text-gray-600 mb-2 font-medium">Ustadz Dr. Ali Saman Hasan, Lc., L.LM., M.A</p>
+                  <p className="text-sm text-gray-600 mb-2 font-medium">{t('proposal.greetings.subtitle')}</p>
                   
                   <div className="space-y-4 text-gray-700 leading-relaxed">
                     <p className="bg-white/50 p-4 rounded-lg border-l-4 border-green-500">
-                      Segala puji bagi Allah SWT yang telah memberikan kita nikmat iman, Islam,
-                      serta kesempatan untuk terus berkhidmat dalam dunia pendidikan. Shalawat
-                      serta salam semoga senantiasa tercurah kepada junjungan kita, Nabi
-                      Muhammad ﷺ, keluarga, sahabat, dan pengikut beliau hingga akhir zaman.
+                      {t('proposal.greetings.paragraphs.0')}
                     </p>
                     
                     <p>
-                      Atas nama Konsorsium Pendidikan Islam Internasional (KOPIN), saya
-                      menyampaikan apresiasi yang sebesar-besarnya atas terselenggaranya
-                      EdunationFest 2025, sebuah ajang pameran pendidikan internasional yang
-                      akan menjadi titik temu penting bagi para pendidik, lembaga, dan generasi
-                      muda dalam membangun ekosistem pendidikan Islam yang kolaboratif,
-                      inovatif, dan berstandar global.
+                      {t('proposal.greetings.paragraphs.1')}
                     </p>
                     
                     <p>
-                      KOPIN hadir sebagai wadah strategis untuk menghubungkan lembaga
-                      pendidikan Islam di Indonesia dengan jejaring internasional, memastikan
-                      bahwa nilai-nilai Islam dapat terus dihidupkan sejalan dengan perkembangan
-                      global. Melalui kegiatan seperti EdunationFest 2025, kita berharap akan lahir
-                      sinergi baru, ide-ide segar, serta peluang kerja sama yang dapat memperkuat
-                      daya saing pendidikan Islam Indonesia di kancah dunia.
+                      {t('proposal.greetings.paragraphs.2')}
+                    </p>
+                    
+                    <p>
+                      {t('proposal.greetings.paragraphs.3')}
                     </p>
                     
                     <p className="bg-white/50 p-4 rounded-lg border-l-4 border-blue-500">
-                      Saya mengajak seluruh peserta, lembaga, dan mitra untuk menjadikan
-                      momentum ini sebagai langkah nyata dalam membangun peradaban Islam
-                      yang unggul melalui pendidikan. Semoga Allah SWT meridai setiap ikhtiar
-                      kita, memudahkan jalan kita, dan menjadikan acara ini penuh manfaat serta
-                      keberkahan.
+                      {t('proposal.greetings.paragraphs.4')}
                     </p>
                   </div>
                   
                   <p className="text-right font-semibold mt-6 text-gray-800">
-                    Dr. Ali Saman Hasan, Lc., L.LM., M.A.<br />
-                    <span className="text-green-600">Ketua KOPIN</span>
+                    {t('proposal.greetings.subtitle')}<br />
+                    <span className="text-green-600">{t('proposal.greetings.position')}</span>
                   </p>
                 </div>
               </div>
@@ -119,10 +119,10 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              Mengapa Diadakan EduNation Fest 2025
+              {t('proposal.whyEduNation.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Festival pendidikan internasional yang menghubungkan talenta Indonesia dengan peluang global</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.whyEduNation.subtitle')}</p>
           </div>
           
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -145,13 +145,10 @@ export default function ProposalEdunation() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                        Mencari Talenta-Talenta Terbaik dari Indonesia
+                        {t('proposal.whyEduNation.reasons.0.title')}
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
-                        Di sisi lain, institusi pendidikan internasional saat ini sedang aktif mencari talenta-
-                        talenta muda dari Indonesia. Mereka menyadari potensi besar generasi muda
-                        Indonesia yang memiliki semangat belajar tinggi, daya saing global, dan
-                        kemampuan beradaptasi dalam berbagai lingkungan multikultural.
+                        {t('proposal.whyEduNation.reasons.0.description')}
                       </p>
                     </div>
                   </div>
@@ -164,13 +161,10 @@ export default function ProposalEdunation() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                        Menampilkan Keunggulan Program Pendidikan
+                        {t('proposal.whyEduNation.reasons.1.title')}
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
-                        Melalui Edunation Festival, institusi pendidikan dari berbagai negara
-                        memiliki kesempatan untuk menampilkan keunggulan program pendidikan,
-                        fasilitas, serta pendekatan pembelajaran mereka secara langsung kepada
-                        publik Indonesia.
+                        {t('proposal.whyEduNation.reasons.1.description')}
                       </p>
                     </div>
                   </div>
@@ -183,12 +177,10 @@ export default function ProposalEdunation() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                        Minimnya Akses Informasi yang Komprehensif
+                        {t('proposal.whyEduNation.reasons.2.title')}
                       </h3>
                       <p className="text-gray-700 leading-relaxed">
-                        Di era globalisasi dan persaingan internasional yang semakin ketat, akses
-                        terhadap informasi pendidikan yang komprehensif dan terpercaya menjadi
-                        kebutuhan mendesak bagi para pelajar dan orang tua di Indonesia.
+                        {t('proposal.whyEduNation.reasons.2.description')}
                       </p>
                     </div>
                   </div>
@@ -202,17 +194,17 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              PORTOFOLIO
+              {t('proposal.portfolio.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Pengalaman kami dalam menyelenggarakan acara pendidikan berkualitas</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.portfolio.subtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Lingkup Sekolah */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
               <div className="bg-gradient-to-r from-green-500 to-blue-500 p-6 text-center">
-                <h3 className="text-2xl font-bold text-white">LINGKUP SEKOLAH</h3>
+                <h3 className="text-2xl font-bold text-white">{t('proposal.portfolio.schoolScope.title')}</h3>
               </div>
               <div className="p-6 space-y-6">
                 <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
@@ -220,12 +212,9 @@ export default function ProposalEdunation() {
                     <img src="/edunation/portfolio_1.png" alt="WAFAIR" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">1. WAFAIR</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">1. {t('proposal.portfolio.schoolScope.items.0.title')}</h4>
                     <p className="text-sm text-gray-600">
-                      Pameran pendidikan yang berada dalam lingkup sekolah. Acara ini diadakan untuk
-                      mengenalkan berbagai perguruan tinggi kepada para siswa, bertujuan untuk
-                      memberikan wawasan bagi para siswa tentang jalur perguruan tinggi, beasiswa,
-                      dan karier.
+                      {t('proposal.portfolio.schoolScope.items.0.description')}
                     </p>
                   </div>
                 </div>
@@ -235,12 +224,9 @@ export default function ProposalEdunation() {
                     <img src="/edunation/portfolio_2.png" alt="Campus Sharing" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">2. Campus Sharing 2023</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">2. {t('proposal.portfolio.schoolScope.items.1.title')}</h4>
                     <p className="text-sm text-gray-600">
-                      Ramah tamah yang mempertemukan siswa Al Wafi dari jenjang SMP dan SMA
-                      dengan para alumni. Dalam acara ini, para alumni yang saat ini tersebar di
-                      berbagai perguruan tinggi, baik di dalam maupun luar negeri, akan berbagi
-                      pengalaman dan informasi seputar kehidupan kampus.
+                      {t('proposal.portfolio.schoolScope.items.1.description')}
                     </p>
                   </div>
                 </div>
@@ -250,11 +236,9 @@ export default function ProposalEdunation() {
                     <img src="/edunation/portfolio_3.png" alt="Al-Irsyad EduFest" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">3. Al-Irsyad EduFest</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">3. {t('proposal.portfolio.schoolScope.items.2.title')}</h4>
                     <p className="text-sm text-gray-600">
-                      Kegiatan tahunan yang diinisiasi oleh alumni Pesantren Islam Al Irsyad
-                      Tengaran untuk para santri tingkat SMA. Acara ini menghadirkan Campus Expo,
-                      workshop, sharing alumni, dan tryout ITAF.
+                      {t('proposal.portfolio.schoolScope.items.2.description')}
                     </p>
                   </div>
                 </div>
@@ -264,7 +248,7 @@ export default function ProposalEdunation() {
             {/* Lingkup Nasional */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
               <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-center">
-                <h3 className="text-2xl font-bold text-white">LINGKUP NASIONAL</h3>
+                <h3 className="text-2xl font-bold text-white">{t('proposal.portfolio.nationalScope.title')}</h3>
               </div>
               <div className="p-6 space-y-6">
                 <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
@@ -272,11 +256,9 @@ export default function ProposalEdunation() {
                     <img src="/edunation/portfolio_nasional_1.png" alt="EXPO ASESI" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">1. EXPO ASESI</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">1. {t('proposal.portfolio.nationalScope.items.0.title')}</h4>
                     <p className="text-sm text-gray-600">
-                      Pameran pendidikan Islam yang diselenggarakan oleh ASESI (Perkumpulan
-                      Komunikasi Sekolah Sunnah Indonesia). Kegiatan ini menjadi ajang strategis bagi
-                      sekolah-sekolah Sunnah dan pesantren dari seluruh Indonesia.
+                      {t('proposal.portfolio.nationalScope.items.0.description')}
                     </p>
                   </div>
                 </div>
@@ -286,12 +268,9 @@ export default function ProposalEdunation() {
                     <img src="/edunation/portfolio_nasional_2.png" alt="PULDAPIA EXPO" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">2. PULDAPIA EXPO</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">2. {t('proposal.portfolio.nationalScope.items.1.title')}</h4>
                     <p className="text-sm text-gray-600">
-                      Festival pendidikan islam yang mempertemukan berbagai lembaga pendidikan
-                      islam, termasuk sekolah dan pesantren, dalam satu ajang kolaborasi dan promosi.
-                      Diselenggarakan di Jakarta Convention Center sebagai bagian dari Indonesia Muslim
-                      Life fest.
+                      {t('proposal.portfolio.nationalScope.items.1.description')}
                     </p>
                   </div>
                 </div>
@@ -304,10 +283,10 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              OUR EVENT
+              {t('proposal.ourEvent.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Berbagai kegiatan menarik yang akan menghiasi EduNation Fest 2025</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.ourEvent.subtitle')}</p>
           </div>
           
           <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-2xl p-8 shadow-xl">
@@ -318,7 +297,7 @@ export default function ProposalEdunation() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg">1. Perlombaan Pendidikan</h3>
+                <h3 className="font-semibold text-lg">1. {t('proposal.ourEvent.events.0')}</h3>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
@@ -327,7 +306,7 @@ export default function ProposalEdunation() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg">2. Pameran Pendidikan</h3>
+                <h3 className="font-semibold text-lg">2. {t('proposal.ourEvent.events.1')}</h3>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
@@ -336,7 +315,7 @@ export default function ProposalEdunation() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg">3. EduTalk (4 Kacamata)</h3>
+                <h3 className="font-semibold text-lg">3. {t('proposal.ourEvent.events.2')}</h3>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
@@ -345,7 +324,7 @@ export default function ProposalEdunation() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-lg">4. Institutional Matchmaking</h3>
+                <h3 className="font-semibold text-lg">4. {t('proposal.ourEvent.events.3')}</h3>
               </div>
             </div>
           </div>
@@ -355,10 +334,10 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              PAMERAN PENDIDIKAN
+              {t('proposal.educationExpo.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Menghubungkan lembaga pendidikan nasional dan internasional dengan calon peserta didik</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.educationExpo.subtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -367,23 +346,27 @@ export default function ProposalEdunation() {
                 <img src="/edunation/edunation_fest_national.png" alt="Lembaga Pendidikan Nasional" className="w-full h-full object-contain transition-transform duration-500 hover:scale-110" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Lembaga Pendidikan Nasional</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{t('proposal.educationExpo.national.title')}</h3>
                 <ul className="space-y-3 text-black">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    SD (Sekolah Dasar)
+                    {t('proposal.educationExpo.national.items.0')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    SMP/MTS (Sekolah Menengah Pertama / Madrasah Tsanawiyah)
+                    {t('proposal.educationExpo.national.items.1')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    SMA/MA (Sekolah Menengah Atas / Madrasah Aliyah)
+                    {t('proposal.educationExpo.national.items.2')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                    Perguruan tinggi
+                    {t('proposal.educationExpo.national.items.3')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.4')}
                   </li>
                 </ul>
               </div>
@@ -394,23 +377,27 @@ export default function ProposalEdunation() {
                 <img src="/edunation/edunation_fest_international.png" alt="Lembaga Pendidikan Internasional" className="w-full h-full object-contain transition-transform duration-500 hover:scale-110" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Lembaga Pendidikan Internasional</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{t('proposal.educationExpo.international.title')}</h3>
                 <ul className="space-y-3 text-black">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    SD (Sekolah Dasar)
+                    {t('proposal.educationExpo.international.items.0')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    SMP/MTS (Sekolah Menengah Pertama / Madrasah Tsanawiyah)
+                    {t('proposal.educationExpo.international.items.1')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    SMA/MA (Sekolah Menengah Atas / Madrasah Aliyah)
+                    {t('proposal.educationExpo.international.items.2')}
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                    Perguruan tinggi
+                    {t('proposal.educationExpo.international.items.3')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.4')}
                   </li>
                 </ul>
               </div>
@@ -422,40 +409,40 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              EDUTALK (4 KACAMATA)
+              {t('proposal.eduTalk.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Berbagai perspektif dari para ahli dan praktisi pendidikan</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.eduTalk.subtitle')}</p>
           </div>
 
           {/* Regulator */}
           <div className="mb-12">
             <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-t-2xl p-6 text-center">
-              <h3 className="text-2xl font-bold">REGULATOR PENDIDIKAN</h3>
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.regulator')}</h3>
             </div>
             <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abdul_muti.png" alt="Prof. Dr. H. Abdul Mu'ti, M.Ed., M.A." className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">1. Prof. Dr. H. Abdul Mu'ti, M.Ed., M.A.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Menteri Pendidikan Dasar dan Menengah Republik Indonesia</p>
+                    <img src="/edunation/abdul_muti.png" alt={t('proposal.eduTalk.speakers.regulators.0.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.regulators.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.0.position')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border-l-4 border-blue-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/brian_yuliarto.png" alt="Prof. Brian Yuliarto, S.T., M.Eng., Ph.D." className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">2. Prof. Brian Yuliarto, S.T., M.Eng., Ph.D.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia</p>
+                    <img src="/edunation/brian_yuliarto.png" alt={t('proposal.eduTalk.speakers.regulators.1.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.regulators.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.1.position')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-l-4 border-purple-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/nasarudin_umar.png" alt="Prof. Dr. KH. Nasaruddin Umar" className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">3. Prof. Dr. KH. Nasaruddin Umar</h4>
-                    <p className="text-gray-600 text-sm mt-2">Menteri Agama Republik Indonesia</p>
+                    <img src="/edunation/nasarudin_umar.png" alt={t('proposal.eduTalk.speakers.regulators.2.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.regulators.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.2.position')}</p>
                   </div>
                 </div>
               </div>
@@ -465,31 +452,31 @@ export default function ProposalEdunation() {
           {/* Tokoh Pendidikan */}
           <div className="mb-12">
             <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-t-2xl p-6 text-center">
-              <h3 className="text-2xl font-bold">TOKOH PENDIDIKAN</h3>
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.figure')}</h3>
             </div>
             <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border-l-4 border-orange-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/jusuf_kalla.png" alt="Drs. H. Muhammad Jusuf Kalla" className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">1. Drs. H. Muhammad Jusuf Kalla</h4>
-                    <p className="text-gray-600 text-sm mt-2">Wakil Presiden Republik Indonesia Periode 2004-2009 & 2014-2019</p>
+                    <img src="/edunation/jusuf_kalla.png" alt={t('proposal.eduTalk.speakers.figures.0.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.figures.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.0.position')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-l-4 border-red-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/anies_baswedan.png" alt="Prof. Dr. (H.C.) Anies Rasyid Baswedan, M.B.A., Ph.D." className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">2. Prof. Dr. (H.C.) Anies Rasyid Baswedan, M.B.A., Ph.D.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Gubernur DKI Jakarta periode 2017–2022, Menteri Pendidikan dan Kebudayaan Kabinet Kerja (2014-2016)</p>
+                    <img src="/edunation/anies_baswedan.png" alt={t('proposal.eduTalk.speakers.figures.1.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.figures.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.1.position')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-6 rounded-xl border-l-4 border-pink-500 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/muhadjir_efendi.png" alt="Prof. Dr. Muhadjir Effendy, M.AP" className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">3. Prof. Dr. Muhadjir Effendy, M.AP</h4>
-                    <p className="text-gray-600 text-sm mt-2">Plt. Menteri Pemuda dan Olahraga (2023), Plt. Menteri Sosial (2020 dan 2024), Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan (2019-2024), Menteri Pendidikan dan Kebudayaan (2016-2019)</p>
+                    <img src="/edunation/muhadjir_efendi.png" alt={t('proposal.eduTalk.speakers.figures.2.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.figures.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.2.position')}</p>
                   </div>
                 </div>
               </div>
@@ -499,39 +486,39 @@ export default function ProposalEdunation() {
           {/* Pakar Pendidikan */}
           <div className="mb-12">
             <div className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-t-2xl p-6 text-center">
-              <h3 className="text-2xl font-bold">PAKAR PENDIDIKAN</h3>
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.expert')}</h3>
             </div>
             <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/taufik_kasturi.png" alt="Prof. Taufik Kasturi, M.Si., Ph.D." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">1. Prof. Taufik Kasturi, M.Si., Ph.D.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Dekan Fakultas Psikologi, UMS (2021-2025), Wakil Rektor Bidang Kemahasiswaan, UMS (2017-2021), Dekan Fakultas Psikologi, UMS (2014-2017)</p>
+                    <img src="/edunation/taufik_kasturi.png" alt={t('proposal.eduTalk.speakers.experts.0.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.experts.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.0.position')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/putra_asga_eevri.png" alt="Putra Asga Elevri, S.Si., M.Si." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">2. Putra Asga Elevri, S.Si., M.Si.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Analis Kebijakan Jabatan Fungsional Madya (2020-2022), Direktur Guru Pendidikan Menengah dan Pendidikan Khusus (2022-Sekarang), Kepala Sub Direktorat (2019-2020)</p>
+                    <img src="/edunation/putra_asga_eevri.png" alt={t('proposal.eduTalk.speakers.experts.1.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.experts.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.1.position')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="\edunation\muhammad_zuhdi.png" alt="Prof. Muhammad Zuhdi M.Ed., Ph.D." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">3. Prof. Muhammad Zuhdi M.Ed., Ph.D.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Kepala UI Halal Center (2021-2024), Wakil Rektor Bidang Sumber Daya Manusia dan Aset UI (2019-2020), Direktur SKSG dan Kaprodi KTTI (2014-2019), Atase Pendidikan dan Kebudayaan (2009-2013)</p>
+                    <img src="/edunation/muhammad_zuhdi.png" alt={t('proposal.eduTalk.speakers.experts.2.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.experts.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.2.position')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="\edunation\maila_dinia.png" alt="Prof. Maila Dinia Husni Rahiem, M.A., Ph.D." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">4. Prof. Maila Dinia Husni Rahiem, M.A., Ph.D.</h4>
-                    <p className="text-gray-600 text-sm mt-2">Konsultor editor internasional International Journal of Children’s Stanford/Elsevier Top 2% Scientists Worldwide 2024</p>
+                    <img src="/edunation/maila_dinia.png" alt={t('proposal.eduTalk.speakers.experts.3.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">4. {t('proposal.eduTalk.speakers.experts.3.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.3.position')}</p>
                   </div>
                 </div>
               </div>
@@ -541,110 +528,110 @@ export default function ProposalEdunation() {
           {/* CENDEKIAWAN MUSLIM */}
           <div>
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-t-2xl p-6 text-center">
-              <h3 className="text-2xl font-bold">CENDEKIAWAN MUSLIM</h3>
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.scholar')}</h3>
             </div>
             <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/rizal_yuliar_putrananda.png" alt="Ustadz Rizal Yuliar Putrananda, Lc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">1. Ustadz Rizal Yuliar Putrananda, Lc.</h4>
-                    <p className="text-gray-600 text-sm">Pengasuh Pesantren Al-Lu’lu’ Wal Marjan</p>
-                    <p className="text-gray-600 text-sm">Pembimbing Umroh di Dauroh Travel</p>
-                    <p className="text-gray-600 text-sm">pemateri di Rodja TV</p>
+                    <img src="/edunation/rizal_yuliar_putrananda.png" alt={t('proposal.eduTalk.speakers.scholars.0.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.scholars.0.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.2')}</p>
                   </div>
                 </div>
                 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abdul_aziz_al_owainy.png" alt="Ustadz Abdul Aziz Al Owainy, Lc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">2. Ustadz Abdul Aziz Al Owainy, Lc.</h4>
-                    <p className="text-gray-600 text-sm">Sekretaris yayasan Imam Muzani Boarding School</p>
+                    <img src="/edunation/abdul_aziz_al_owainy.png" alt={t('proposal.eduTalk.speakers.scholars.1.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.scholars.1.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.1.position')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/mufy_hanif_thalib.png" alt="Ustadz Mufy Hanif Thalib, Lc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">3. Ustadz Mufy Hanif Thalib, Lc.</h4>
-                    <p className="text-gray-600 text-sm">Pemateri tetap di kanal Yufid TV </p>
-                    <p className="text-gray-600 text-sm">Alumus University Islamic Medina </p>
-                    <p className="text-gray-600 text-sm">Pembimbing/Tour Leader Umroh Nakhla Tour</p>
+                    <img src="/edunation/mufy_hanif_thalib.png" alt={t('proposal.eduTalk.speakers.scholars.2.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.scholars.2.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.2')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abdurrahman_zahier.png" alt="Ustadz Abdurrahman Zahier, BBA." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">4. Ustadz Abdurrahman Zahier, BBA.</h4>
-                    <p className="text-gray-600 text-sm">Pengajar sharia di Hijra (2025 - saat ini)</p>
-                    <p className="text-gray-600 text-sm">Konsultan sharia di paragoncrop ( 2024 - saat ini)</p>
-                    <p className="text-gray-600 text-sm">Pengajar fiqh muamalah ITAF  (2019 - 2022)</p>
+                    <img src="/edunation/abdurrahman_zahier.png" alt={t('proposal.eduTalk.speakers.scholars.3.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">4. {t('proposal.eduTalk.speakers.scholars.3.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.2')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abdullah_roy.png" alt="Dr. Abdullah Roy, M.A" className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">5. Dr. Abdullah Roy, M.A</h4>
-                    <p className="text-gray-600 text-sm">Pengajar di masjid Nabawi ( 2013 - 2017)</p>
-                    <p className="text-gray-600 text-sm">Founder HSI Abdullah Roy </p>
-                    <p className="text-gray-600 text-sm">Ketua STIT Riyadhussholihin </p>
-                    <p className="text-gray-600 text-sm">Dosen di STDI Imam syafii</p>
+                    <img src="/edunation/abdullah_roy.png" alt={t('proposal.eduTalk.speakers.scholars.4.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">5. {t('proposal.eduTalk.speakers.scholars.4.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.3')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abduh_tuasikal.png" alt="Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">6. Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc.</h4>
-                    <p className="text-gray-600 text-sm">Pembina pondok pesantren Darush Sholihin </p>
-                    <p className="text-gray-600 text-sm">Pembina yayasan Darush Sholihin </p>
-                    <p className="text-gray-600 text-sm">Pembina dan penasehat KPMI </p>
-                    <p className="text-gray-600 text-sm">Anggota MUI Gunung Kidul</p>
+                    <img src="/edunation/abduh_tuasikal.png" alt={t('proposal.eduTalk.speakers.scholars.5.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">6. {t('proposal.eduTalk.speakers.scholars.5.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.3')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/abu_yahya_badrussalam.png" alt="Ustadz Abu Yahya Badrusalam, Lc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">7. Ustadz Abu Yahya Badrusalam, Lc.</h4>
-                    <p className="text-gray-600 text-sm">Pembina dan pengasuh Radio Rodja</p>
-                    <p className="text-gray-600 text-sm">Pemateri di Safdah TV </p>
-                    <p className="text-gray-600 text-sm">Pengajar di mahad Ulum Syariyyah  </p>
-                    <p className="text-gray-600 text-sm">Penasehat di Al Minhaj Islamic Boarding School</p>
+                    <img src="/edunation/abu_yahya_badrussalam.png" alt={t('proposal.eduTalk.speakers.scholars.6.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">7. {t('proposal.eduTalk.speakers.scholars.6.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.3')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/raehanul_bahrain.png" alt="Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK" className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">8. Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK</h4>
-                    <p className="text-gray-600 text-sm">Dosen Fakultas kedokteran Universitas Mataram</p>
-                    <p className="text-gray-600 text-sm">Dokter Spesialis Patologi Klinik di RSUP NTB</p>
-                    <p className="text-gray-600 text-sm">Ketua Yayasan Pendidikan Islam Al-Atsari </p>
-                    <p className="text-gray-600 text-sm">Pembina KIPMI (Komunitas Ilmuan dan Profesional Muslim Indonesia)</p>
+                    <img src="/edunation/raehanul_bahrain.png" alt={t('proposal.eduTalk.speakers.scholars.7.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">8. {t('proposal.eduTalk.speakers.scholars.7.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.3')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/khalid_basalamah.png" alt="Dr. Khalid Zeed Basalamah, Lc., M.A." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">9. Dr. Khalid Zeed Basalamah, Lc., M.A.</h4>
-                    <p className="text-gray-600 text-sm">Ketua umum yayasan Ats-Tsabath </p>
-                    <p className="text-gray-600 text-sm">Ketua forum pengirim dai Irian </p>
-                    <p className="text-gray-600 text-sm">Penasehat wesaltv Jakarta </p>
-                    <p className="text-gray-600 text-sm">Direktur di PT. Ajwad</p>
+                    <img src="/edunation/khalid_basalamah.png" alt={t('proposal.eduTalk.speakers.scholars.8.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">9. {t('proposal.eduTalk.speakers.scholars.8.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.3')}</p>
                   </div>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex flex-col items-center text-center">
-                    <img src="/edunation/nuzul_dzikri.png" alt="Ustadz Muhammad Nuzul Dzikri, Lc." className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
-                    <h4 className="font-semibold text-gray-800">10. Ustadz Muhammad Nuzul Dzikri, Lc.</h4>
-                    <p className="text-gray-600 text-sm">Pemateri tetap di masjid Nurul iman Blok M </p>
-                    <p className="text-gray-600 text-sm">Pemateri kajian mahasiswa FK UI (2013-2014)</p>
-                    <p className="text-gray-600 text-sm">Pemateri di YISC di masjid Al Azhar</p>
+                    <img src="/edunation/nuzul_dzikri.png" alt={t('proposal.eduTalk.speakers.scholars.9.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">10. {t('proposal.eduTalk.speakers.scholars.9.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.2')}</p>
                   </div>
                 </div>
               </div>
@@ -656,46 +643,46 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              INSTITUTIONAL MATCHMAKING
+              {t('proposal.institutionalMatchmaking.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Menghubungkan lembaga pendidikan dengan calon mitra strategis</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.institutionalMatchmaking.subtitle')}</p>
           </div>
           
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl p-8 shadow-xl">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-4">Tujuan Institutional Matchmaking</h3>
+                <h3 className="text-xl font-bold mb-4">{t('proposal.institutionalMatchmaking.objectives.title')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Memfasilitasi pertemuan antara lembaga pendidikan nasional dan internasional</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.0')}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Menciptakan peluang kerja sama yang saling menguntungkan</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Membangun jaringan pendidikan yang kuat dan berkelanjutan</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.2')}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
-                <h3 className="text-xl font-bold mb-4">Manfaat bagi Peserta</h3>
+                <h3 className="text-xl font-bold mb-4">{t('proposal.institutionalMatchmaking.benefits.title')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Akses langsung ke lembaga pendidikan terkemuka</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.0')}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Peluang untuk membangun kemitraan strategis</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
-                    <span>Kesempatan untuk berbagi praktik terbaik dalam pendidikan</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.2')}</span>
                   </li>
                 </ul>
               </div>
@@ -707,10 +694,10 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              TARGET PESERTA
+              {t('proposal.targetParticipants.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Berbagai kalangan yang akan terlibat dalam Edunation Fest 2025</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.targetParticipants.subtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -721,8 +708,8 @@ export default function ProposalEdunation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l9 5m-9-5v10" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Pelajar</h3>
-              <p className="text-gray-600 text-sm">SD, SMP, SMA, dan Mahasiswa</p>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.0.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.0.description')}</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -731,8 +718,8 @@ export default function ProposalEdunation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Orang Tua</h3>
-              <p className="text-gray-600 text-sm">Wali murid dan calon wali murid</p>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.1.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.1.description')}</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -741,8 +728,8 @@ export default function ProposalEdunation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Lembaga Pendidikan</h3>
-              <p className="text-gray-600 text-sm">Sekolah, kampus, dan pesantren</p>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.2.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.2.description')}</p>
             </div>
             
             <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -751,8 +738,8 @@ export default function ProposalEdunation() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Pemerhati Pendidikan</h3>
-              <p className="text-gray-600 text-sm">Penggiat dan pemerhati dunia pendidikan</p>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.3.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.3.description')}</p>
             </div>
           </div>
         </div>
@@ -761,32 +748,32 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              TARGET JUMLAH PENGUNJUNG
+              {t('proposal.targetVisitors.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Jumlah pengunjung yang ditargetkan untuk Edunation Fest 2025</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.targetVisitors.subtitle')}</p>
           </div>
           
           <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-2xl p-8 shadow-xl">
             <div className="text-center">
-              <div className="text-6xl font-bold mb-4">15.000+</div>
-              <p className="text-xl">Pengunjung Selama 3 Hari Pelaksanaan</p>
+              <div className="text-6xl font-bold mb-4">{t('proposal.targetVisitors.total')}</div>
+              <p className="text-xl">{t('proposal.targetVisitors.duration')}</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6 mt-8">
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
-                <div className="text-3xl font-bold">5.000+</div>
-                <p>Hari Pertama</p>
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.0.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.0.day')}</p>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
-                <div className="text-3xl font-bold">5.000+</div>
-                <p>Hari Kedua</p>
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.1.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.1.day')}</p>
               </div>
               
               <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
-                <div className="text-3xl font-bold">5.000+</div>
-                <p>Hari Ketiga</p>
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.2.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.2.day')}</p>
               </div>
             </div>
           </div>
@@ -796,36 +783,36 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              TIMELINE
+              {t('proposal.timeline.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Rencana pelaksanaan Edunation Fest 2025</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.timeline.subtitle')}</p>
           </div>
           
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-4 gap-0">
               <div className="bg-gradient-to-b from-green-500 to-blue-500 text-white p-6 text-center">
-                <div className="text-4xl font-bold mb-2">1</div>
-                <h3 className="text-xl font-semibold">Persiapan</h3>
-                <p className="mt-2">Juli - September 2025</p>
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.0.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.0.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.0.period')}</p>
               </div>
               
               <div className="bg-gradient-to-b from-blue-500 to-purple-500 text-white p-6 text-center">
-                <div className="text-4xl font-bold mb-2">2</div>
-                <h3 className="text-xl font-semibold">Promosi</h3>
-                <p className="mt-2">Oktober 2025</p>
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.1.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.1.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.1.period')}</p>
               </div>
               
               <div className="bg-gradient-to-b from-purple-500 to-pink-500 text-white p-6 text-center">
-                <div className="text-4xl font-bold mb-2">3</div>
-                <h3 className="text-xl font-semibold">Pelaksanaan</h3>
-                <p className="mt-2">7-9 November 2025</p>
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.2.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.2.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.2.period')}</p>
               </div>
               
               <div className="bg-gradient-to-b from-pink-500 to-red-500 text-white p-6 text-center">
-                <div className="text-4xl font-bold mb-2">4</div>
-                <h3 className="text-xl font-semibold">Evaluasi</h3>
-                <p className="mt-2">Desember 2025</p>
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.3.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.3.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.3.period')}</p>
               </div>
             </div>
           </div>
@@ -835,16 +822,16 @@ export default function ProposalEdunation() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
-              KONTAK KAMI
+              {t('proposal.contactUs.title')}
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Hubungi kami untuk informasi lebih lanjut tentang Edunation Fest 2025</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.contactUs.subtitle')}</p>
           </div>
           
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Informasi Kontak</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('proposal.contactUs.contactInfo.title')}</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -854,8 +841,8 @@ export default function ProposalEdunation() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">Telepon</h4>
-                      <p className="text-gray-600">+62 812-3456-7890</p>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.phone.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.phone.number')}</p>
                     </div>
                   </div>
                   
@@ -866,8 +853,8 @@ export default function ProposalEdunation() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">Email</h4>
-                      <p className="text-gray-600">info@edunationfest2025.com</p>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.email.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.email.address')}</p>
                     </div>
                   </div>
                   
@@ -879,44 +866,44 @@ export default function ProposalEdunation() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">Alamat</h4>
-                      <p className="text-gray-600">Assembly Hall, Jakarta International Convention Center (JICC), Jakarta</p>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.address.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.address.location')}</p>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="p-8 md:p-12">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('proposal.contactUs.form.title')}</h3>
                 
                 <form className="space-y-4">
                   <div>
-                    <label className="block text-gray-700 mb-2" htmlFor="name">Nama Lengkap</label>
+                    <label className="block text-gray-700 mb-2" htmlFor="name">{t('proposal.contactUs.form.fields.name.label')}</label>
                     <input 
                       type="text" 
                       id="name" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Masukkan nama lengkap"
+                      placeholder={t('proposal.contactUs.form.fields.name.placeholder')}
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
+                    <label className="block text-gray-700 mb-2" htmlFor="email">{t('proposal.contactUs.form.fields.email.label')}</label>
                     <input 
                       type="email" 
                       id="email" 
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Masukkan alamat email"
+                      placeholder={t('proposal.contactUs.form.fields.email.placeholder')}
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-gray-700 mb-2" htmlFor="message">Pesan</label>
+                    <label className="block text-gray-700 mb-2" htmlFor="message">{t('proposal.contactUs.form.fields.message.label')}</label>
                     <textarea 
                       id="message" 
                       rows={4}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                      placeholder="Tulis pesan Anda di sini"
+                      placeholder={t('proposal.contactUs.form.fields.message.placeholder')}
                     ></textarea>
                   </div>
                   
@@ -924,7 +911,7 @@ export default function ProposalEdunation() {
                     type="submit" 
                     className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all transform hover:-translate-y-1"
                   >
-                    Kirim Pesan
+                    {t('proposal.contactUs.form.button')}
                   </button>
                 </form>
               </div>

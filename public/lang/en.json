@@ -469,5 +469,371 @@
       "terms": "Terms & Conditions",
       "cookies": "Cookie Policy"
     }
+  },
+  "proposal": {
+    "greetings": {
+      "title": "GREETINGS",
+      "subtitle": "Ustadz Dr. Ali Saman Hasan, Lc., L.LM., M.A",
+      "position": "Chairman of KOPIN",
+      "paragraphs": [
+        "All praise be to Allah SWT who has blessed us with faith, Islam, and the opportunity to continue serving in the field of education. May prayers and peace be upon our beloved Prophet Muhammad ﷺ, his family, companions, and followers until the end of time.",
+        "On behalf of the International Islamic Education Consortium (KOPIN), I express our deepest appreciation for the holding of EduNationFest 2025, an international education exhibition that will become an important meeting point for educators, institutions, and young generations in building a collaborative, innovative, and globally standardized Islamic education ecosystem.",
+        "EduNationFest 2025 is not just an ordinary exhibition, but a transformative movement that connects shared visions to realize Indonesia Emas 2045 through high-quality Islamic education. This event will be a platform for innovative ideas, best practices, and strategic collaborations that can drive the advancement of Islamic education in Indonesia and the world.",
+        "Through active participation from various educational institutions, practitioners, academics, and other stakeholders, EduNationFest 2025 is expected to generate strong synergy in building Islamic education that is not only academically excellent, but also capable of forming strong Islamic character and personality in the next generation.",
+        "May EduNationFest 2025 become a valuable momentum to strengthen international Islamic education networks, improve human resource quality, and make real contributions to the advancement of world civilization. Barakallahu fiikum wa jazakumullahu khairan."
+      ]
+    },
+    "whyEduNation": {
+      "title": "Why EduNation Fest 2025 is Held",
+      "subtitle": "An international education festival that connects Indonesian talent with global opportunities",
+      "reasons": [
+        {
+          "title": "Seeking the Best Talents from Indonesia",
+          "description": "On the other hand, international educational institutions are currently actively seeking young talents from Indonesia. They recognize the great potential of Indonesia's young generation who have high learning enthusiasm, global competitiveness, and adaptability in various multicultural environments."
+        },
+        {
+          "title": "Showcasing Excellence of Educational Programs",
+          "description": "Through the Edunation Festival, educational institutions from various countries have the opportunity to showcase the excellence of their educational programs, facilities, and learning approaches directly to the Indonesian public."
+        },
+        {
+          "title": "Limited Access to Comprehensive Information",
+          "description": "In the era of globalization and increasingly fierce international competition, access to comprehensive and reliable educational information has become an urgent need for students and parents in Indonesia."
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "PORTFOLIO",
+      "subtitle": "Our experience in organizing quality educational events",
+      "schoolScope": {
+        "title": "SCHOOL SCOPE",
+        "items": [
+          {
+            "title": "WAFAIR",
+            "description": "An educational exhibition within the school scope. This event is held to introduce various universities to students, aiming to provide insight for students about university pathways, scholarships, and careers."
+          },
+          {
+            "title": "Campus Sharing 2023",
+            "description": "A gathering that brings together Al Wafi students from junior and senior high school levels with alumni. In this event, alumni who are currently spread across various universities, both domestic and abroad, will share experiences and information about campus life."
+          },
+          {
+            "title": "Al-Irsyad EduFest",
+            "description": "An annual activity initiated by alumni of Al Irsyad Tengaran Islamic Boarding School for high school level students. This event features Campus Expo, workshops, alumni sharing, and ITAF tryouts."
+          }
+        ]
+      },
+      "nationalScope": {
+        "title": "NATIONAL SCOPE",
+        "items": [
+          {
+            "title": "EXPO ASESI",
+            "description": "An Islamic education exhibition organized by ASESI (Indonesian Sunnah School Communication Association). This activity becomes a strategic forum for Sunnah schools and Islamic boarding schools from all over Indonesia."
+          },
+          {
+            "title": "PULDAPIA EXPO",
+            "description": "An Islamic education festival that brings together various Islamic educational institutions, including schools and Islamic boarding schools, in one collaboration and promotion event. Held at Jakarta Convention Center as part of Indonesia Muslim Life fest."
+          }
+        ]
+      }
+    },
+    "ourEvent": {
+      "title": "OUR EVENT",
+      "subtitle": "Various exciting activities that will color EduNation Fest 2025",
+      "events": [
+        "Educational Competition",
+        "Education Exhibition",
+        "EduTalk (4 Perspectives)",
+        "Institutional Matchmaking"
+      ]
+    },
+    "educationExpo": {
+      "title": "EDUCATION EXHIBITION",
+      "subtitle": "Connecting national and international educational institutions with prospective students",
+      "national": {
+        "title": "National Educational Institutions",
+        "items": [
+          "Integrated Islamic Schools",
+          "Modern Islamic Boarding Schools",
+          "Excellence Madrasah",
+          "National Islamic Universities",
+          "Course & Training Institutions"
+        ]
+      },
+      "international": {
+        "title": "International Educational Institutions",
+        "items": [
+          "Middle Eastern Universities",
+          "Malaysian Islamic Schools",
+          "European Higher Education",
+          "Student Exchange Programs",
+          "International Scholarships"
+        ]
+      }
+    },
+    "eduTalk": {
+      "title": "EDUTALK (4 PERSPECTIVES)",
+      "subtitle": "Various perspectives from education experts and practitioners",
+      "categories": {
+        "regulator": "EDUCATION REGULATORS",
+        "figure": "EDUCATION FIGURES",
+        "expert": "EDUCATION EXPERTS", 
+        "scholar": "MUSLIM SCHOLARS"
+      },
+      "speakers": {
+        "regulators": [
+          {
+            "name": "Prof. Dr. H. Abdul Mu'ti, M.Ed., M.A.",
+            "position": "Minister of Primary and Secondary Education, Republic of Indonesia"
+          },
+          {
+            "name": "Prof. Brian Yuliarto, S.T., M.Eng., Ph.D.",
+            "position": "Ministry of Higher Education, Science, and Technology, Republic of Indonesia"
+          },
+          {
+            "name": "Prof. Dr. KH. Nasaruddin Umar",
+            "position": "Minister of Religious Affairs, Republic of Indonesia"
+          }
+        ],
+        "figures": [
+          {
+            "name": "Drs. H. Muhammad Jusuf Kalla",
+            "position": "Vice President of the Republic of Indonesia Period 2004-2009 & 2014-2019"
+          },
+          {
+            "name": "Prof. Dr. (H.C.) Anies Rasyid Baswedan, M.B.A., Ph.D.",
+            "position": "Governor of DKI Jakarta 2017–2022, Minister of Education and Culture Working Cabinet (2014-2016)"
+          },
+          {
+            "name": "Prof. Dr. Muhadjir Effendy, M.AP",
+            "position": "Acting Minister of Youth and Sports (2023), Acting Minister of Social Affairs (2020 and 2024), Coordinating Minister for Human Development and Culture (2019-2024), Minister of Education and Culture (2016-2019)"
+          }
+        ],
+        "experts": [
+          {
+            "name": "Prof. Taufik Kasturi, M.Si., Ph.D.",
+            "position": "Dean of Faculty of Psychology, UMS (2021-2025), Vice Rector for Student Affairs, UMS (2017-2021), Dean of Faculty of Psychology, UMS (2014-2017)"
+          },
+          {
+            "name": "Putra Asga Elevri, S.Si., M.Si.",
+            "position": "Senior Policy Analyst (2020-2022), Director of Secondary and Special Education Teachers (2022-Present), Head of Sub-Directorate (2019-2020)"
+          },
+          {
+            "name": "Prof. Muhammad Zuhdi M.Ed., Ph.D.",
+            "position": "Head of UI Halal Center (2021-2024), Vice Rector for Human Resources and Assets UI (2019-2020), Director of SKSG and Head of KTTI Study Program (2014-2019), Education and Culture Attaché (2009-2013)"
+          },
+          {
+            "name": "Prof. Maila Dinia Husni Rahiem, M.A., Ph.D.",
+            "position": "International Editor Consultant International Journal of Children's Stanford/Elsevier Top 2% Scientists Worldwide 2024"
+          }
+        ],
+        "scholars": [
+          {
+            "name": "Ustadz Rizal Yuliar Putrananda, Lc.",
+            "position": [
+              "Caretaker of Al-Lu'lu' Wal Marjan Islamic Boarding School",
+              "Umrah Guide at Dauroh Travel",
+              "Speaker at Rodja TV"
+            ]
+          },
+          {
+            "name": "Ustadz Abdul Aziz Al Owainy, Lc.",
+            "position": "Secretary of Imam Muzani Boarding School Foundation"
+          },
+          {
+            "name": "Ustadz Mufy Hanif Thalib, Lc.",
+            "position": [
+              "Regular speaker at Yufid TV channel",
+              "Alumni of Islamic University of Medina",
+              "Umrah Guide/Tour Leader at Nakhla Tour"
+            ]
+          },
+          {
+            "name": "Ustadz Abdurrahman Zahier, BBA.",
+            "position": [
+              "Sharia instructor at Hijra (2025 - present)",
+              "Sharia consultant at paragoncrop (2024 - present)",
+              "Fiqh muamalah instructor at ITAF (2019 - 2022)"
+            ]
+          },
+          {
+            "name": "Dr. Abdullah Roy, M.A",
+            "position": [
+              "Teacher at Nabawi Mosque (2013 - 2017)",
+              "Founder of HSI Abdullah Roy",
+              "Chairman of STIT Riyadhussholihin",
+              "Lecturer at STDI Imam Syafii"
+            ]
+          },
+          {
+            "name": "Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc.",
+            "position": [
+              "Director of Darush Sholihin Islamic Boarding School",
+              "Director of Darush Sholihin Foundation",
+              "Director and advisor of KPMI",
+              "Member of MUI Gunung Kidul"
+            ]
+          },
+          {
+            "name": "Ustadz Abu Yahya Badrusalam, Lc.",
+            "position": [
+              "Director and caretaker of Radio Rodja",
+              "Speaker at Safdah TV",
+              "Teacher at Mahad Ulum Syariyyah",
+              "Advisor at Al Minhaj Islamic Boarding School"
+            ]
+          },
+          {
+            "name": "Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK",
+            "position": [
+              "Lecturer at Faculty of Medicine, University of Mataram",
+              "Clinical Pathology Specialist at RSUP NTB",
+              "Chairman of Al-Atsari Islamic Education Foundation",
+              "Director of KIPMI (Indonesian Muslim Scholars and Professionals Community)"
+            ]
+          },
+          {
+            "name": "Dr. Khalid Zeed Basalamah, Lc., M.A.",
+            "position": [
+              "General Chairman of Ats-Tsabath Foundation",
+              "Chairman of Irian Da'wah Dispatch Forum",
+              "Advisor at wesaltv Jakarta",
+              "Director at PT. Ajwad"
+            ]
+          },
+          {
+            "name": "Ustadz Muhammad Nuzul Dzikri, Lc.",
+            "position": [
+              "Regular speaker at Nurul Iman Mosque Blok M",
+              "Student study speaker at FK UI (2013-2014)",
+              "Speaker at YISC at Al Azhar Mosque"
+            ]
+          }
+        ]
+      }
+    },
+    "institutionalMatchmaking": {
+      "title": "INSTITUTIONAL MATCHMAKING",
+      "subtitle": "Connecting educational institutions with potential strategic partners",
+      "objectives": {
+        "title": "Institutional Matchmaking Objectives",
+        "items": [
+          "Facilitate meetings between national and international educational institutions",
+          "Create mutually beneficial collaboration opportunities",
+          "Build strong and sustainable educational networks"
+        ]
+      },
+      "benefits": {
+        "title": "Benefits for Participants",
+        "items": [
+          "Direct access to leading educational institutions",
+          "Opportunities to build strategic partnerships",
+          "Chances to share best practices in education"
+        ]
+      }
+    },
+    "targetParticipants": {
+      "title": "TARGET PARTICIPANTS",
+      "subtitle": "Various groups that will be involved in EduNation Fest 2025",
+      "categories": [
+        {
+          "title": "Students",
+          "description": "Elementary, Middle, High School, and University Students"
+        },
+        {
+          "title": "Parents",
+          "description": "Current and prospective parents"
+        },
+        {
+          "title": "Educational Institutions",
+          "description": "Schools, universities, and Islamic boarding schools"
+        },
+        {
+          "title": "Education Enthusiasts",
+          "description": "Education activists and observers"
+        }
+      ]
+    },
+    "targetVisitors": {
+      "title": "TARGET NUMBER OF VISITORS",
+      "subtitle": "Targeted number of visitors for EduNation Fest 2025",
+      "total": "15,000+",
+      "duration": "Visitors Over 3 Days of Implementation",
+      "daily": [
+        {
+          "day": "First Day",
+          "count": "5,000+"
+        },
+        {
+          "day": "Second Day",
+          "count": "5,000+"
+        },
+        {
+          "day": "Third Day",
+          "count": "5,000+"
+        }
+      ]
+    },
+    "timeline": {
+      "title": "TIMELINE",
+      "subtitle": "Implementation plan for EduNation Fest 2025",
+      "phases": [
+        {
+          "number": "1",
+          "title": "Preparation",
+          "period": "July - September 2025"
+        },
+        {
+          "number": "2",
+          "title": "Promotion",
+          "period": "October 2025"
+        },
+        {
+          "number": "3",
+          "title": "Implementation",
+          "period": "November 7-9, 2025"
+        },
+        {
+          "number": "4",
+          "title": "Evaluation",
+          "period": "December 2025"
+        }
+      ]
+    },
+    "contactUs": {
+      "title": "CONTACT US",
+      "subtitle": "Contact us for more information about EduNation Fest 2025",
+      "contactInfo": {
+        "title": "Contact Information",
+        "phone": {
+          "label": "Phone",
+          "number": "+62 812-3456-7890"
+        },
+        "email": {
+          "label": "Email",
+          "address": "info@edunationfest2025.com"
+        },
+        "address": {
+          "label": "Address",
+          "location": "Assembly Hall, Jakarta International Convention Center (JICC), Jakarta"
+        }
+      },
+      "form": {
+        "title": "Send Message",
+        "fields": {
+          "name": {
+            "label": "Full Name",
+            "placeholder": "Enter your full name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "Enter your email address"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Write your message here"
+          }
+        },
+        "button": "Send Message"
+      }
+    }
   }
 }
