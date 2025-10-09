@@ -374,6 +374,58 @@ export default function ProposalEdunation() {
           </div>
         </div>
 
+
+        {/* PERLOMBAAN PENDIDIKAN Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.competitionBox.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 px-4">
+            {/* Target Peserta */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-blue-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col items-center w-full mb-4">
+                <div className="flex justify-center items-center w-14 h-14 bg-blue-100 rounded-full mb-2">
+                  {/* Ikon User Group */}
+                  <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z" /></svg>
+                </div>
+                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mt-1">
+                  {t('proposal.competitionBox.targetTitle')}
+                </span>
+              </div>
+              <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.targetDesc')}</p>
+            </div>
+            {/* Tujuan Perlombaan */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-green-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col items-center w-full mb-4">
+                <div className="flex justify-center items-center w-14 h-14 bg-green-100 rounded-full mb-2">
+                  {/* Ikon Target/Goal */}
+                  <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+                </div>
+                <span className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold mt-1">
+                  {t('proposal.competitionBox.goalTitle')}
+                </span>
+              </div>
+              <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.goalDesc')}</p>
+            </div>
+            {/* Kategori Perlombaan */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-yellow-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex flex-col items-center w-full mb-4">
+                <div className="flex justify-center items-center w-14 h-14 bg-yellow-100 rounded-full mb-2">
+                  {/* Ikon Trophy/Award */}
+                  <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8M12 17v4M17 5V3a1 1 0 00-1-1H8a1 1 0 00-1 1v2M21 5a3 3 0 01-3 3c0 4-2 7-6 7s-6-3-6-7a3 3 0 01-3-3" /></svg>
+                </div>
+                <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mt-1">
+                  {t('proposal.competitionBox.categoryTitle')}
+                </span>
+              </div>
+              <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.categoryDesc')}</p>
+            </div>
+          </div>
+        </div>
+
         {/* Pameran Pendidikan Section dengan card yang lebih menarik */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -383,7 +435,6 @@ export default function ProposalEdunation() {
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.educationExpo.subtitle')}</p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
               <div className="h-48 overflow-hidden">
@@ -415,7 +466,6 @@ export default function ProposalEdunation() {
                 </ul>
               </div>
             </div>
-            
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
               <div className="h-48 overflow-hidden">
                 <img src="/edunation/edunation_fest_international.png" alt="Lembaga Pendidikan Internasional" className="w-full h-full object-contain transition-transform duration-500 hover:scale-110" />
@@ -467,14 +517,14 @@ export default function ProposalEdunation() {
               </div>
               
               {/* Container untuk 2 gambar isi */}
-              <div className="flex">
+              <div className="grid grid-cols-2 gap-0">
                 {/* Gambar Kiri */}
-                <div className="flex-1 h-48 overflow-hidden -mr-1">
+                <div className="h-48 overflow-hidden">
                   <img src="/edunation/active_participation_left.png" alt="Active Participation Left" className="w-full h-full object-contain" />
                 </div>
                 
                 {/* Gambar Kanan */}
-                <div className="flex-1 h-48 overflow-hidden -ml-1">
+                <div className="h-48 overflow-hidden">
                   <img src="/edunation/active_participation_right.png" alt="Active Participation Right" className="w-full h-full object-contain" />
                 </div>
               </div>

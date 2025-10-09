@@ -701,6 +701,15 @@
     }
   },
   "proposal": {
+    "competitionBox": {
+      "title": "PERLOMBAAN PENDIDIKAN",
+      "targetTitle": "Target Peserta",
+      "targetDesc": "Perlombaan ini menargetkan pelajar setingkat SMA/SMK hingga mahasiswa dari berbagai universitas di seluruh Indonesia. Dengan cakupan nasional, kami menerapkan sistem pendaftaran dan seleksi yang fleksibel secara online dan offline untuk memastikan kesempatan yang sama bagi setiap peserta, di mana pun mereka berada.",
+      "goalTitle": "Tujuan Perlombaan Edukasi",
+      "goalDesc": "Perlombaan ini bertujuan untuk mengembangkan potensi dan membangun jaringan di kalangan pelajar dan mahasiswa. Melalui kompetisi ini, kami berupaya menciptakan komunitas yang saling mendukung dan menginspirasi dari seluruh Indonesia. Pada akhirnya, semua ini adalah langkah nyata untuk meningkatkan kualitas sumber daya manusia Indonesia agar siap bersaing di tingkat global.",
+      "categoryTitle": "Kategori Perlombaan",
+      "categoryDesc": "Perlombaan kami dirancang dengan sistem hybrid yang inovatif, memadukan kompetisi daring dan luring untuk menjangkau peserta dari seluruh Indonesia secara maksimal. Perlombaan offline akan diadakan di Jakarta Convention Center (JCC) pada 7-9 November, bertepatan dengan Edufest. Kategori ini mencakup Debat, Pidato, dan Puisi yang menuntut kehadiran fisik peserta. Sementara itu, perlombaan online dapat diikuti oleh peserta dari seluruh penjuru negeri, dengan kategori seperti Content Creator, Desain Poster, Film Pendek, Fotografi, dan News Anchor. Terakhir, ada juga kategori hybrid yang menggabungkan babak penyisihan daring dan final luring, seperti Spelling Bee dan Business Plan Competition."
+    },
     "activeParticipation": {
       "title": "Partisipasi Aktif",
       "subtitle": "Dari Organisasi International Baccalaureate"

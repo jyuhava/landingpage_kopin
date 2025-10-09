@@ -471,6 +471,15 @@
     }
   },
   "proposal": {
+    "competitionBox": {
+      "title": "EDUCATION COMPETITION",
+      "targetTitle": "Target Participants",
+      "targetDesc": "This competition targets high school/vocational students up to university students from various universities across Indonesia. With a national scope, we implement a flexible registration and selection system both online and offline to ensure equal opportunities for every participant, wherever they are.",
+      "goalTitle": "Purpose of the Education Competition",
+      "goalDesc": "This competition aims to develop potential and build networks among students. Through this competition, we strive to create a supportive and inspiring community from all over Indonesia. Ultimately, all of this is a concrete step to improve the quality of Indonesia's human resources to be ready to compete globally.",
+      "categoryTitle": "Competition Categories",
+      "categoryDesc": "Our competition is designed with an innovative hybrid system, combining online and offline competitions to reach participants from all over Indonesia. The offline competition will be held at the Jakarta Convention Center (JCC) on November 7-9, coinciding with Edufest. This category includes Debate, Speech, and Poetry, which require the physical presence of participants. Meanwhile, the online competition can be joined by participants from all over the country, with categories such as Content Creator, Poster Design, Short Film, Photography, and News Anchor. Lastly, there are also hybrid categories that combine online preliminary rounds and offline finals, such as Spelling Bee and Business Plan Competition."
+    },
     "activeParticipation": {
       "title": "Active Participation",
       "subtitle": "From International Baccalaureate Organization"
