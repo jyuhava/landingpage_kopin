@@ -1,218 +1,207 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+'use client';
 
-export default function ProposalEduNationPage() {
+import { useLanguage } from "../contexts/LanguageContext";
+
+export default function ProposalEdunation() {
+  const { t, isLoading } = useLanguage();
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Memuat...</p>
+        </div>
+      </div>
+    );
+  }
   return (
-    <main className="bg-white min-h-screen">
-      <Navbar />
-
-      <div className="pt-20">
-        {/* Hero Section */}
-        <div className="w-full h-[470px] bg-[url('https://kopinindonesia.org/foto_fgd_5.jpeg')] bg-center">
-            <div className="bg-slate-900/80 w-full h-full">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 h-full place-content-center">
-                    {/* Header Section */}
-                    <div className="text-center mb-16 flex flex-col gap-4">
-                        <h1 className="text-5xl font-bold text-white-800 mb-4">
-                        Proposal Edu Nation Fest 2025
-                        </h1>
-                        <p className="text-2xl text-green-400 font-semibold mb-2">
-                          Educational International Festival
-                        </p>
-                        <p className="text-xl">
-                          "Towards Indonesia Emas & Global Education"
-                        </p>
-                        <p className="text-lg mt-2">
-                          7-9 November | Assembly Hall, JICC
-                        </p>
-                    </div>
-                </div>
-
+    <section className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+      {/* Hero Section dengan efek parallax */}
+      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-[url('https://kopinindonesia.org/foto_fgd_5.jpeg')] bg-cover bg-center bg-fixed"
+          style={{ transform: 'translateZ(0)' }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-blue-900/70"></div>
+        
+        <div className="relative z-10 text-center text-white max-w-4xl px-4">
+          <div className="mb-6">
+            <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-4 border border-green-500/30">
+              {t('hero.declaration.badge')}
+            </span>
+          </div>
+          
+          {/* Festival Logos */}
+          <div className="flex justify-center items-center gap-8 mb-8 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+            <div className="flex-shrink-0">
+              <img 
+                src="/edunation/festival-logo.png" 
+                alt="Festival Logo Left" 
+                className="h-16 md:h-20 w-auto object-contain max-w-[150px] opacity-100"
+                style={{ display: 'block' }}
+              />
             </div>
+            <div className="flex-shrink-0">
+              <img 
+                src="/edunation/festival-logo-right.png" 
+                alt="Festival Logo Right" 
+                className="h-16 md:h-20 w-auto object-contain max-w-[150px] opacity-100"
+                style={{ display: 'block' }}
+              />
+            </div>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Proposal <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Edu Nation</span> Fest 2025
+          </h1>
+          
+          
+          <p className="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">
+            "{t('hero.declaration.title')} {t('hero.declaration.titleSecondLine')}"
+          </p>
+          
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+              <p className="text-lg font-semibold">{t('eduNationFest.data.date')}</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+              <p className="text-lg font-semibold">{t('eduNationFest.data.location')}</p>
+            </div>
+          </div>
+          
+          <div className="mt-12 animate-bounce">
+            <svg className="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Greetings Section dengan card modern */}
+        <div className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:shadow-2xl">
+            <div className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 p-8 md:p-12">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="md:w-1/3 flex justify-center">
+                  <div className="relative">
+                    <img
+                      src="\edunation\ali_saman.png"
+                      alt="Dr. Ali Saman Hasan"
+                      className="w-64 h-64 rounded-2xl shadow-lg object-cover"
+                    />
+                    <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      {t('proposal.greetings.position')}
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-2/3">
+                  <h2 className="text-4xl font-bold text-gray-800 mb-6 relative inline-block">
+                    {t('proposal.greetings.title')}
+                    <span className="absolute -bottom-2 left-0 w-1/3 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+                  </h2>
+                  
+                  <p className="text-sm text-gray-600 mb-2 font-medium">{t('proposal.greetings.subtitle')}</p>
+                  
+                  <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <p className="bg-white/50 p-4 rounded-lg border-l-4 border-green-500">
+                      {t('proposal.greetings.paragraphs.0')}
+                    </p>
+                    
+                    <p>
+                      {t('proposal.greetings.paragraphs.1')}
+                    </p>
+                    
+                    <p>
+                      {t('proposal.greetings.paragraphs.2')}
+                    </p>
+                    
+                    <p>
+                      {t('proposal.greetings.paragraphs.3')}
+                    </p>
+                    
+                    <p className="bg-white/50 p-4 rounded-lg border-l-4 border-blue-500">
+                      {t('proposal.greetings.paragraphs.4')}
+                    </p>
+                  </div>
+                  
+                  <p className="text-right font-semibold mt-6 text-gray-800">
+                    {t('proposal.greetings.subtitle')}<br />
+                    <span className="text-green-600">{t('proposal.greetings.position')}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {/* Greetings Section */}
-          <div className="mb-16">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">GREETINGS</h2>
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="md:w-1/3">
-                    <img
-                      src="/edunation/ali_saman_greetings.png"
-                      alt="Dr. Ali Saman Hasan"
-                      className="w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
-                  <div className="md:w-2/3">
-                    <p className="text-sm text-gray-600 mb-2">Ustadz Dr. Ali Saman Hasan, Lc., L.LM., M.A</p>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Segala puji bagi Allah SWT yang telah memberikan kita nikmat iman, Islam,
-                      serta kesempatan untuk terus berkhidmat dalam dunia pendidikan. Shalawat
-                      serta salam semoga senantiasa tercurah kepada junjungan kita, Nabi
-                      Muhammad ﷺ, keluarga, sahabat, dan pengikut beliau hingga akhir zaman.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      Atas nama Konsorsium Pendidikan Islam Internasional (KOPIN), saya
-                      menyampaikan apresiasi yang sebesar-besarnya atas terselenggaranya
-                      EdunationFest 2025, sebuah ajang pameran pendidikan internasional yang
-                      akan menjadi titik temu penting bagi para pendidik, lembaga, dan generasi
-                      muda dalam membangun ekosistem pendidikan Islam yang kolaboratif,
-                      inovatif, dan berstandar global.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed mb-4">
-                      KOPIN hadir sebagai wadah strategis untuk menghubungkan lembaga
-                      pendidikan Islam di Indonesia dengan jejaring internasional, memastikan
-                      bahwa nilai-nilai Islam dapat terus dihidupkan sejalan dengan perkembangan
-                      global. Melalui kegiatan seperti EdunationFest 2025, kita berharap akan lahir
-                      sinergi baru, ide-ide segar, serta peluang kerja sama yang dapat memperkuat
-                      daya saing pendidikan Islam Indonesia di kancah dunia.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      Saya mengajak seluruh peserta, lembaga, dan mitra untuk menjadikan
-                      momentum ini sebagai langkah nyata dalam membangun peradaban Islam
-                      yang unggul melalui pendidikan. Semoga Allah SWT meridai setiap ikhtiar
-                      kita, memudahkan jalan kita, dan menjadikan acara ini penuh manfaat serta
-                      keberkahan.
-                    </p>
-                    <p className="text-right font-semibold mt-4">
-                      Dr. Ali Saman Hasan, Lc., L.LM., M.A.<br />
-                      Ketua KOPIN
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Mengapa Diadakan Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Mengapa Diadakan EduNation Fest 2025
+        {/* Mengapa Diadakan Section dengan timeline visual */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.whyEduNation.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-8">
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.whyEduNation.subtitle')}</p>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="p-8 md:p-12 bg-gradient-to-br from-green-50 to-blue-50">
                 <img
-                  src="/edunation/mengapa_diadakan_edunation_fest_2025.png"
+                  src="https://kopinindonesia.org/foto_fgd_5.jpeg"
                   alt="Mengapa Diadakan"
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-64 object-cover rounded-xl shadow-lg"
                 />
               </div>
-              <div className="grid md:grid-cols-1 gap-6">
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    1. Mencari Talenta-Talenta Terbaik dari Indonesia
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Di sisi lain, institusi pendidikan internasional saat ini sedang aktif mencari talenta-
-                    talenta muda dari Indonesia. Mereka menyadari potensi besar generasi muda
-                    Indonesia yang memiliki semangat belajar tinggi, daya saing global, dan
-                    kemampuan beradaptasi dalam berbagai lingkungan multikultural. Hal ini menjadi
-                    peluang besar bagi siswa Indonesia untuk mengejar pendidikan berkualitas dan
-                    membangun masa depan yang lebih baik.
-                  </p>
-                </div>
-                <div className="border-l-4 border-blue-500 pl-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    2. Menampilkan Keunggulan Program Pendidikan
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Melalui Edunation Festival, institusi pendidikan dari berbagai negara
-                    memiliki kesempatan untuk menampilkan keunggulan program pendidikan,
-                    fasilitas, serta pendekatan pembelajaran mereka secara langsung kepada
-                    publik Indonesia. Festival ini menjadi wadah interaktif yang tidak hanya
-                    memberikan informasi, tetapi juga membuka akses dan jaringan antara
-                    pelajar Indonesia dengan dunia pendidikan global.
-                  </p>
-                </div>
-                <div className="border-l-4 border-purple-500 pl-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    3. Minimnya Akses Informasi yang Komprehensif
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Di era globalisasi dan persaingan internasional yang semakin ketat, akses
-                    terhadap informasi pendidikan yang komprehensif dan terpercaya menjadi
-                    kebutuhan mendesak bagi para pelajar dan orang tua di Indonesia. Namun,
-                    kenyataannya masih banyak calon siswa dan mahasiswa yang mengalami
-                    kesulitan dalam memperoleh informasi lengkap mengenai pilihan pendidikan,
-                    baik di dalam maupun luar negeri, dari jenjang SD hingga perguruan tinggi.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Portfolio Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">PORTOFOLIO</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Lingkup Sekolah */}
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">LINGKUP SEKOLAH</h3>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <img src="/edunation/portfolio_1.png" alt="WAFAIR" className="w-20 h-20 rounded-lg shadow-md" />
+              
+              <div className="p-8 md:p-12">
+                <div className="space-y-8">
+                  <div className="flex gap-4 group">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                        1
+                      </div>
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">1. WAFAIR</h4>
-                      <p className="text-sm text-gray-600">
-                        Pameran pendidikan yang berada dalam lingkup sekolah. Acara ini diadakan untuk
-                        mengenalkan berbagai perguruan tinggi kepada para siswa, bertujuan untuk
-                        memberikan wawasan bagi para siswa tentang jalur perguruan tinggi, beasiswa,
-                        dan karier.
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                        {t('proposal.whyEduNation.reasons.0.title')}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {t('proposal.whyEduNation.reasons.0.description')}
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-4">
-                    <img src="/edunation/portfolio_2.png" alt="Campus Sharing" className="w-20 h-20 rounded-lg shadow-md" />
+                  
+                  <div className="flex gap-4 group">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                        2
+                      </div>
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800">2. Campus Sharing 2023</h4>
-                      <p className="text-sm text-gray-600">
-                        Ramah tamah yang mempertemukan siswa Al Wafi dari jenjang SMP dan SMA
-                        dengan para alumni. Dalam acara ini, para alumni yang saat ini tersebar di
-                        berbagai perguruan tinggi, baik di dalam maupun luar negeri, akan berbagi
-                        pengalaman dan informasi seputar kehidupan kampus.
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                        {t('proposal.whyEduNation.reasons.1.title')}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {t('proposal.whyEduNation.reasons.1.description')}
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-4">
-                    <img src="/edunation/portfolio_3.png" alt="Al-Irsyad EduFest" className="w-20 h-20 rounded-lg shadow-md" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">3. Al-Irsyad EduFest</h4>
-                      <p className="text-sm text-gray-600">
-                        Kegiatan tahunan yang diinisiasi oleh alumni Pesantren Islam Al Irsyad
-                        Tengaran untuk para santri tingkat SMA. Acara ini menghadirkan Campus Expo,
-                        workshop, sharing alumni, dan tryout ITAF.
-                      </p>
+                  
+                  <div className="flex gap-4 group">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                        3
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Lingkup Nasional */}
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">LINGKUP NASIONAL</h3>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <img src="/edunation/portfolio_nasional_1.png" alt="EXPO ASESI" className="w-20 h-20 rounded-lg shadow-md" />
                     <div>
-                      <h4 className="font-semibold text-gray-800">1. EXPO ASESI</h4>
-                      <p className="text-sm text-gray-600">
-                        Pameran pendidikan Islam yang diselenggarakan oleh ASESI (Perkumpulan
-                        Komunikasi Sekolah Sunnah Indonesia). Kegiatan ini menjadi ajang strategis bagi
-                        sekolah-sekolah Sunnah dan pesantren dari seluruh Indonesia.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <img src="/edunation/portfolio_nasional_2.png" alt="PULDAPIA EXPO" className="w-20 h-20 rounded-lg shadow-md" />
-                    <div>
-                      <h4 className="font-semibold text-gray-800">2. PULDAPIA EXPO</h4>
-                      <p className="text-sm text-gray-600">
-                        Festival pendidikan islam yang mempertemukan berbagai lembaga pendidikan
-                        islam, termasuk sekolah dan pesantren, dalam satu ajang kolaborasi dan promosi.
-                        Diselenggarakan di Jakarta Convention Center sebagai bagian dari Indonesia Muslim
-                        Life fest.
+                      <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                        {t('proposal.whyEduNation.reasons.2.title')}
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        {t('proposal.whyEduNation.reasons.2.description')}
                       </p>
                     </div>
                   </div>
@@ -220,463 +209,737 @@ export default function ProposalEduNationPage() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Our Event Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">OUR EVENT</h2>
-            <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg p-8 text-center">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-semibold">1. Perlombaan Pendidikan</h3>
+        {/* Portfolio Section dengan card interaktif */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.portfolio.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.portfolio.subtitle')}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Lingkup Sekolah */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+              <div className="bg-gradient-to-r from-green-500 to-blue-500 p-6 text-center">
+                <h3 className="text-2xl font-bold text-white">{t('proposal.portfolio.schoolScope.title')}</h3>
+              </div>
+              <div className="p-6 space-y-6">
+                <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
+                  <div className="flex-shrink-0">
+                    <img src="/edunation/portfolio_1.png" alt="WAFAIR" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">1. {t('proposal.portfolio.schoolScope.items.0.title')}</h4>
+                    <p className="text-sm text-gray-600">
+                      {t('proposal.portfolio.schoolScope.items.0.description')}
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-semibold">2. Pameran Pendidikan</h3>
+                
+                <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
+                  <div className="flex-shrink-0">
+                    <img src="/edunation/portfolio_2.png" alt="Campus Sharing" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">2. {t('proposal.portfolio.schoolScope.items.1.title')}</h4>
+                    <p className="text-sm text-gray-600">
+                      {t('proposal.portfolio.schoolScope.items.1.description')}
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-semibold">3. EduTalk (4 Kacamata)</h3>
+                
+                <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
+                  <div className="flex-shrink-0">
+                    <img src="/edunation/portfolio_3.png" alt="Al-Irsyad EduFest" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">3. {t('proposal.portfolio.schoolScope.items.2.title')}</h4>
+                    <p className="text-sm text-gray-600">
+                      {t('proposal.portfolio.schoolScope.items.2.description')}
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-semibold">4. Institutional Matchmaking</h3>
+              </div>
+            </div>
+
+            {/* Lingkup Nasional */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-center">
+                <h3 className="text-2xl font-bold text-white">{t('proposal.portfolio.nationalScope.title')}</h3>
+              </div>
+              <div className="p-6 space-y-6">
+                <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
+                  <div className="flex-shrink-0">
+                    <img src="/edunation/portfolio_nasional_1.png" alt="EXPO ASESI" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">1. {t('proposal.portfolio.nationalScope.items.0.title')}</h4>
+                    <p className="text-sm text-gray-600">
+                      {t('proposal.portfolio.nationalScope.items.0.description')}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4 group hover:bg-gray-50 p-4 rounded-xl transition-colors">
+                  <div className="flex-shrink-0">
+                    <img src="/edunation/portfolio_nasional_2.png" alt="PULDAPIA EXPO" className="w-20 h-20 rounded-xl shadow-md object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-800 mb-2">2. {t('proposal.portfolio.nationalScope.items.1.title')}</h4>
+                    <p className="text-sm text-gray-600">
+                      {t('proposal.portfolio.nationalScope.items.1.description')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Event Section dengan grid modern */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.ourEvent.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.ourEvent.subtitle')}</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-2xl p-8 shadow-xl">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
+                <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-lg">1. {t('proposal.ourEvent.events.0')}</h3>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
+                <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-lg">2. {t('proposal.ourEvent.events.1')}</h3>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
+                <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-lg">3. {t('proposal.ourEvent.events.2')}</h3>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl text-center transform transition-transform duration-300 hover:scale-105 hover:bg-white/30">
+                <div className="w-16 h-16 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-lg">4. {t('proposal.ourEvent.events.3')}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Pameran Pendidikan Section dengan card yang lebih menarik */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.educationExpo.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.educationExpo.subtitle')}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 overflow-hidden">
+                <img src="/edunation/edunation_fest_national.png" alt="Lembaga Pendidikan Nasional" className="w-full h-full object-contain transition-transform duration-500 hover:scale-110" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{t('proposal.educationExpo.national.title')}</h3>
+                <ul className="space-y-3 text-black">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.0')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.1')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.2')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.3')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.national.items.4')}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+              <div className="h-48 overflow-hidden">
+                <img src="/edunation/edunation_fest_international.png" alt="Lembaga Pendidikan Internasional" className="w-full h-full object-contain transition-transform duration-500 hover:scale-110" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{t('proposal.educationExpo.international.title')}</h3>
+                <ul className="space-y-3 text-black">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.0')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.1')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.2')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.3')}
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
+                    {t('proposal.educationExpo.international.items.4')}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* EduTalk Sections dengan tab navigation */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.eduTalk.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.eduTalk.subtitle')}</p>
+          </div>
+
+          {/* Regulator */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-t-2xl p-6 text-center">
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.regulator')}</h3>
+            </div>
+            <div className="bg-white rounded-b-2xl shadow-xl p-6">
+              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abdul_muti.png" alt={t('proposal.eduTalk.speakers.regulators.0.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.regulators.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.0.position')}</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl border-l-4 border-blue-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/brian_yuliarto.png" alt={t('proposal.eduTalk.speakers.regulators.1.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.regulators.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.1.position')}</p>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border-l-4 border-purple-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/nasarudin_umar.png" alt={t('proposal.eduTalk.speakers.regulators.2.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.regulators.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.regulators.2.position')}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Pameran Pendidikan Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">PAMERAN PENDIDIKAN</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <img src="/edunation/edunation_fest_national.png" alt="Lembaga Pendidikan Nasional" className="w-full h-48 object-cover rounded-lg mb-4" />
-                <h3 className="text-xl font-bold text-gray-800">Lembaga Pendidikan Nasional</h3>
-                <ul className="text-left mt-4 space-y-2">
-                  <li>• SD (Sekolah Dasar)</li>
-                  <li>• SMP/MTS (Sekolah Menengah Pertama / Madrasah Tsanawiyah)</li>
-                  <li>• SMA/MA (Sekolah Menengah Atas / Madrasah Aliyah)</li>
-                  <li>• Perguruan tinggi</li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <img src="/edunation/edunation_fest_international.png" alt="Lembaga Pendidikan Internasional" className="w-full h-48 object-cover rounded-lg mb-4" />
-                <h3 className="text-xl font-bold text-gray-800">Lembaga Pendidikan Internasional</h3>
-                <ul className="text-left mt-4 space-y-2">
-                  <li>• SD (Sekolah Dasar)</li>
-                  <li>• SMP/MTS (Sekolah Menengah Pertama / Madrasah Tsanawiyah)</li>
-                  <li>• SMA/MA (Sekolah Menengah Atas / Madrasah Aliyah)</li>
-                  <li>• Perguruan tinggi</li>
-                </ul>
-              </div>
+          {/* Tokoh Pendidikan */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-t-2xl p-6 text-center">
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.figure')}</h3>
             </div>
-          </div>
-
-          {/* EduTalk Sections */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">EDUTALK (4 KACAMATA)</h2>
-
-            {/* Regulator */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center bg-gray-100 py-3 rounded-lg">
-                - REGULATOR PENDIDIKAN -
-              </h3>
-              <div className="grid md:grid-cols-1 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-green-500">
-                  <img src="/edunation/abdul_muti.png" alt="Prof. Dr. H. Abdul Mu'ti, M.Ed., M.A." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">1. Prof. Dr. H. Abdul Mu'ti, M.Ed., M.A.</h4>
-                  <p className="text-gray-600">Menteri Pendidikan Dasar dan Menengah Republik Indonesia</p>
+            <div className="bg-white rounded-b-2xl shadow-xl p-6">
+              <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border-l-4 border-orange-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/jusuf_kalla.png" alt={t('proposal.eduTalk.speakers.figures.0.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.figures.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.0.position')}</p>
+                  </div>
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
-                  <img src="/edunation/brian_yuliarto.png" alt="Prof. Brian Yuliarto, S.T., M.Eng., Ph.D." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">2. Prof. Brian Yuliarto, S.T., M.Eng., Ph.D.</h4>
-                  <p className="text-gray-600">Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia</p>
+                
+                <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-l-4 border-red-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/anies_baswedan.png" alt={t('proposal.eduTalk.speakers.figures.1.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.figures.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.1.position')}</p>
+                  </div>
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-purple-500">
-                  <img src="/edunation/nasarudin_umar.png" alt="Prof. Dr. KH. Nasaruddin Umar" className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">3. Prof. Dr. KH. Nasaruddin Umar</h4>
-                  <p className="text-gray-600">Menteri Agama Republik Indonesia</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Tokoh Pendidikan */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center bg-gray-100 py-3 rounded-lg">
-                - TOKOH PENDIDIKAN -
-              </h3>
-              <div className="grid md:grid-cols-1 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-orange-500">
-                  <img src="/edunation/jusuf_kalla.png" alt="Drs. H. Muhammad Jusuf Kalla" className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">1. Drs. H. Muhammad Jusuf Kalla</h4>
-                  <p className="text-gray-600">Wakil Presiden Republik Indonesia Periode 2004-2009 & 2014-2019</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-red-500">
-                  <img src="/edunation/anies_baswedan.png" alt="Prof. Dr. (H.C.) Anies Rasyid Baswedan, M.B.A., Ph.D." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">2. Prof. Dr. (H.C.) Anies Rasyid Baswedan, M.B.A., Ph.D.</h4>
-                  <p className="text-gray-600">Gubernur DKI Jakarta periode 2017–2022, Menteri Pendidikan dan Kebudayaan Kabinet Kerja (2014-2016)</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow border-l-4 border-pink-500">
-                  <img src="/edunation/muhadjir_efendi.png" alt="Prof. Dr. Muhadjir Effendy, M.AP" className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">3. Prof. Dr. Muhadjir Effendy, M.AP</h4>
-                  <p className="text-gray-600">Plt. Menteri Pemuda dan Olahraga (2023), Plt. Menteri Sosial (2020 dan 2024), Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan (2019-2024), Menteri Pendidikan dan Kebudayaan (2016-2019)</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Pakar Pendidikan */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center bg-gray-100 py-3 rounded-lg">
-                - PAKAR PENDIDIKAN -
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/taufik_kasturi.png" alt="Prof. Taufik Kasturi, M.Si., Ph.D." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">1. Prof. Taufik Kasturi, M.Si., Ph.D.</h4>
-                  <p className="text-gray-600">Dekan Fakultas Psikologi, UMS (2021-2025), Wakil Rektor Bidang Kemahasiswaan, UMS (2017-2021), Dekan Fakultas Psikologi, UMS (2014-2017)</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/putra_asga_eevri.png" alt="Putra Asga Elevri, S.Si., M.Si." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">2. Putra Asga Elevri, S.Si., M.Si.</h4>
-                  <p className="text-gray-600">Analis Kebijakan Jabatan Fungsional Madya (2020-2022), Direktur Guru Pendidikan Menengah dan Pendidikan Khusus (2022-Sekarang), Kepala Sub Direktorat (2019-2020)</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/muhammad_zuhdi.png" alt="Prof. Muhammad Zuhdi M.Ed., Ph.D." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">3. Prof. Muhammad Zuhdi M.Ed., Ph.D.</h4>
-                  <p className="text-gray-600">Kepala UI Halal Center (2021-2024), Wakil Rektor Bidang Sumber Daya Manusia dan Aset UI (2019-2020), Direktur SKSG dan Kaprodi KTTI (2014-2019), Atase Pendidikan dan Kebudayaan (2009-2013)</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/maila_dinia.png" alt="Prof. Maila Dinia Husni Rahiem, M.A., Ph.D." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">4. Prof. Maila Dinia Husni Rahiem, M.A., Ph.D.</h4>
-                  <p className="text-gray-600">Konsultor editor internasional International Journal of Children's, Stanford/Elsevier Top 2% Scientists Worldwide 2024</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Cendekiawan Muslim */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center bg-gray-100 py-3 rounded-lg">
-                - CENDEKIAWAN MUSLIM -
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/rizal_yuliar_putrananda.png" alt="Ustadz Rizal Yuliar Putrananda, Lc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">1. Ustadz Rizal Yuliar Putrananda, Lc.</h4>
-                  <p className="text-gray-600">Pengasuh Pesantren Al-Lu'lu' Wal Marjan, Pembimbing Umroh di Dauroh Travel, pemateri di Rodja TV</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/abdul_aziz_al_owainy.png" alt="Ustadz Abdul Aziz Al Owainy, Lc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">2. Ustadz Abdul Aziz Al Owainy, Lc.</h4>
-                  <p className="text-gray-600">Sekretaris yayasan Imam Muzani Boarding School</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/mufy_hanif_thalib.png" alt="Ustadz Mufy Hanif Thalib, Lc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">3. Ustadz Mufy Hanif Thalib, Lc.</h4>
-                  <p className="text-gray-600">Pemateri tetap di kanal Yufid TV, Alumus University Islamic Medina, Pembimbing/Tour Leader Umroh Nakhla Tour</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/abdurrahman_zahier.png" alt="Ustadz Abdurrahman Zahier, BBA." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">4. Ustadz Abdurrahman Zahier, BBA.</h4>
-                  <p className="text-gray-600">Pengajar sharia di Hijra (2025 - saat ini), Konsultan sharia di paragoncrop (2024 - saat ini), Pengajar fiqh muamalah ITAF (2019 - 2022)</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/abdullah_roy.png" alt="Dr. Abdullah Roy, M.A" className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">5. Dr. Abdullah Roy, M.A</h4>
-                  <p className="text-gray-600">Pengajar di masjid Nabawi (2013 - 2017), Founder HSI Abdullah Roy, Ketua STIT Riyadhussholihin, Dosen di STDI Imam syafii</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/abduh_tuasikal.png" alt="Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">6. Dr. K.H. Muhammad Abduh Tuasikal, S.T., M.Sc.</h4>
-                  <p className="text-gray-600">Pembina pondok pesantren Darush Sholihin, Pembina yayasan Darush Sholihin, Pembina dan penasehat KPMI, Anggota MUI Gunung Kidul</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/abu_yahya_badrussalam.png" alt="Ustadz Abu Yahya Badrusalam, Lc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">7. Ustadz Abu Yahya Badrusalam, Lc.</h4>
-                  <p className="text-gray-600">Pembina dan pengasuh Radio Rodja, Pemateri di Safdah TV, Pengajar di mahad Ulum Syariyyah, Penasehat di Al Minhaj Islamic Boarding School</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/raehanul_bahrain.png" alt="Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK" className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">8. Ustadz dr. Raehanul Bahraen, M.Sc, Sp.PK</h4>
-                  <p className="text-gray-600">Dosen Fakultas kedokteran Universitas Mataram, Dokter Spesialis Patologi Klinik di RSUP NTB, Ketua Yayasan Pendidikan Islam Al-Atsari, Pembina KIPMI</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/khalid_basalamah.png" alt="Dr. Khalid Zeed Basalamah, Lc., M.A." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">9. Dr. Khalid Zeed Basalamah, Lc., M.A.</h4>
-                  <p className="text-gray-600">Ketua umum yayasan Ats-Tsabath, Ketua forum pengirim dai Irian, Penasehat wesaltv Jakarta, Direktur di PT. Ajwad</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow">
-                  <img src="/edunation/nuzul_dzikri.png" alt="Ustadz Muhammad Nuzul Dzikri, Lc." className="w-24 h-24 rounded-lg shadow-md mb-3 mx-auto" />
-                  <h4 className="font-semibold text-gray-800">10. Ustadz Muhammad Nuzul Dzikri, Lc.</h4>
-                  <p className="text-gray-600">Pemateri tetap di masjid Nurul iman Blok M, Pemateri kajian mahasiswa FK UI (2013-2014), Pemateri di YISC di masjid Al Azhar</p>
+                
+                <div className="bg-gradient-to-br from-pink-50 to-purple-50 p-6 rounded-xl border-l-4 border-pink-500 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/muhadjir_efendi.png" alt={t('proposal.eduTalk.speakers.figures.2.name')} className="w-24 h-24 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.figures.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.figures.2.position')}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Perlombaan Pendidikan Nasional */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Perlombaan Pendidikan Nasional</h2>
-            <div className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg p-8">
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-bold text-lg">SMP</h3>
-                </div>
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-bold text-lg">SMA</h3>
-                </div>
-                <div className="bg-white/20 p-4 rounded-lg">
-                  <h3 className="font-bold text-lg">Perguruan Tinggi</h3>
-                </div>
-              </div>
-              <div className="mt-8 space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">1. Kategori Perlombaan</h4>
-                  <p className="text-sm">
-                    Perlombaan kami dirancang dengan sistem hybrid yang inovatif, memadukan kompetisi daring dan luring untuk
-                    menjangkau peserta dari seluruh Indonesia secara maksimal. Perlombaan offline akan diadakan di Jakarta
-                    Convention Center (JCC) pada 7-9 November, bertepatan dengan Edufest.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">2. Tujuan Perlombaan Edukasi</h4>
-                  <p className="text-sm">
-                    Perlombaan ini bertujuan untuk mengembangkan potensi dan membangun jaringan di kalangan
-                    pelajar dan mahasiswa. Melalui kompetisi ini, kami berupaya menciptakan komunitas yang saling
-                    mendukung dan menginspirasi dari seluruh Indonesia.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">3. Target Peserta</h4>
-                  <p className="text-sm">
-                    Perlombaan ini menargetkan pelajar setingkat SMA/SMK hingga mahasiswa dari berbagai universitas di seluruh Indonesia.
-                  </p>
-                </div>
-              </div>
+          {/* Pakar Pendidikan */}
+          <div className="mb-12">
+            <div className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-t-2xl p-6 text-center">
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.expert')}</h3>
             </div>
-          </div>
-
-          {/* Matchmaking Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">MATCHMAKING</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">1. Latar Belakang & Tujuan</h3>
-                <p className="text-gray-700">
-                  Forum pertemuan strategis lembaga pendidikan & investor di EduNation 2025
-                  Menghubungkan sekolah, kampus, kurikulum internasional, dan lembaga investasi
-                </p>
-              </div>
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">2. Tujuan Utama:</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>Membangun jejaring global antar sekolah & kampus</li>
-                  <li>Adopsi kurikulum internasional (IB)</li>
-                  <li>Kolaborasi riset & pertukaran akademik</li>
-                  <li>Investasi pembangunan sekolah & digitalisasi pendidikan</li>
-                </ul>
-              </div>
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">3. Bentuk Kerjasama:</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>Sekolah Indonesia – Kampus LN → Student exchange, pathway program, beasiswa bersama</li>
-                  <li>Kampus Indonesia – Kampus LN → Joint research, double degree, pertukaran dosen/mahasiswa</li>
-                  <li>Implementasi IB → Workshop, roadmap akreditasi, pendampingan guru</li>
-                  <li>Investor – Sekolah → Pitching pembangunan gedung, PPP, investasi digitalisasi</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">4. Nilai Tambah:</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li>Sekolah → akses kurikulum & jejaring global</li>
-                  <li>Kampus Indonesia → reputasi internasional & riset kolaboratif</li>
-                  <li>Kampus LN → pintu masuk ke pasar pendidikan Indonesia</li>
-                  <li>Investor → peluang investasi berkelanjutan di sektor pendidikan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Food & Beverage Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">FOOD & BEVERAGE</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Area F&B Edunation Fest 2025 menghadirkan kurasi kuliner tepercaya yang menghidupkan suasana,
-                memperpanjang waktu kunjung, dan membuka panggung aktivasi merek bernilai tinggi.
-              </p>
+            <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Value Proposition:</h3>
-                  <p className="text-gray-600">Pilihan kuliner berkualitas + traffic tinggi = engagement nyata & konversi lebih cepat.</p>
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/taufik_kasturi.png" alt={t('proposal.eduTalk.speakers.experts.0.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.experts.0.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.0.position')}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Brand Playground:</h3>
-                  <p className="text-gray-600">Eksklusivitas kategori, penempatan logo strategis, menu highlight di kanal resmi, hingga sampling terkontrol.</p>
+                
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/putra_asga_eevri.png" alt={t('proposal.eduTalk.speakers.experts.1.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.experts.1.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.1.position')}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Trust & Compliance:</h3>
-                  <p className="text-gray-600">Halal dan higienis, ramah lingkungan, patuh kebijakan venue JICC Senayan (7–9 Nov 2025).</p>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/muhammad_zuhdi.png" alt={t('proposal.eduTalk.speakers.experts.2.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.experts.2.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.2.position')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/maila_dinia.png" alt={t('proposal.eduTalk.speakers.experts.3.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">4. {t('proposal.eduTalk.speakers.experts.3.name')}</h4>
+                    <p className="text-gray-600 text-sm mt-2">{t('proposal.eduTalk.speakers.experts.3.position')}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Target Market Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">TARGET MARKET</h2>
-            <div className="bg-blue-50 rounded-lg p-8">
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow text-center">
-                  <h3 className="font-semibold text-gray-800">Orang Tua/Wali Murid</h3>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow text-center">
-                  <h3 className="font-semibold text-gray-800">Murid/Mahasiswa</h3>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow text-center">
-                  <h3 className="font-semibold text-gray-800">Guru/Tenaga Pengajar</h3>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow text-center">
-                  <h3 className="font-semibold text-gray-800">Masyarakat Umum</h3>
-                </div>
-              </div>
+          {/* CENDEKIAWAN MUSLIM */}
+          <div>
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-t-2xl p-6 text-center">
+              <h3 className="text-2xl font-bold">{t('proposal.eduTalk.categories.scholar')}</h3>
             </div>
-          </div>
-
-          {/* Sponsorship Package Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Sponsorship Package</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-8 text-center">
-                <img src="/edunation/sponsorship_package.png" alt="Sponsorship Package" className="w-full max-w-2xl mx-auto h-auto rounded-lg shadow-md" />
-              </div>
+            <div className="bg-white rounded-b-2xl shadow-xl p-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h3 className="font-bold text-gray-800 mb-3">1. Title sponsor</h3>
-                  <p className="text-sm text-gray-600 mb-2">Full naming rights. Keynote di stage. (15') Workshop (45'): 2 sesi. VIP Ticket + Chair. MC Mention. Penayangan video sponsor. Booth Sponsor. Sampling rights. Hak pakai konten foto/video. Collab social media; Distribusi produk/brosur/voucher. Logo (Tier 1) pada: ID card, feed, banner, flyer, spanduk, lanyard, gelang.</p>
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/rizal_yuliar_putrananda.png" alt={t('proposal.eduTalk.speakers.scholars.0.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">1. {t('proposal.eduTalk.speakers.scholars.0.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.0.position.2')}</p>
+                  </div>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h3 className="font-bold text-gray-800 mb-3">2. Main partner</h3>
-                  <p className="text-sm text-gray-600 mb-2">Workshop (45'): 1 sesi. VIP Ticket + Chair; MC Mention; Penayangan video sponsor; Booth Sponsor; Sampling rights; Hak pakai konten foto/video. Collab social media; Distribusi produk/brosur/voucher. Logo (Tier 2) pada: ID card, feed, banner, flyer, spanduk, lanyard, gelang. Keynote di stage (15')</p>
+                
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abdul_aziz_al_owainy.png" alt={t('proposal.eduTalk.speakers.scholars.1.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">2. {t('proposal.eduTalk.speakers.scholars.1.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.1.position')}</p>
+                  </div>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h3 className="font-bold text-gray-800 mb-3">3. Official partner</h3>
-                  <p className="text-sm text-gray-600 mb-2">VIP Ticket + Chair; MC Mention; Penayangan video sponsor; Booth Sponsor; Sampling rights; Hak pakai konten foto/video. Collab social media; Distribusi produk/brosur/voucher. Logo (Tier 3) pada: ID card, feed, banner, flyer, spanduk, lanyard, gelang. Keynote di stage (10')</p>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/mufy_hanif_thalib.png" alt={t('proposal.eduTalk.speakers.scholars.2.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">3. {t('proposal.eduTalk.speakers.scholars.2.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.2.position.2')}</p>
+                  </div>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-4">
-                  <h3 className="font-bold text-gray-800 mb-3">4. Supporting partner</h3>
-                  <p className="text-sm text-gray-600 mb-2">VIP Ticket + Chair; MC Mention; Penayangan video sponsor; Booth Sponsor; Sampling rights; Hak pakai konten foto/video. Collab social media; Distribusi produk/brosur/voucher. Logo (Tier 4) pada: ID card, feed, banner, flyer, spanduk, lanyard, gelang.</p>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abdurrahman_zahier.png" alt={t('proposal.eduTalk.speakers.scholars.3.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">4. {t('proposal.eduTalk.speakers.scholars.3.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.3.position.2')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abdullah_roy.png" alt={t('proposal.eduTalk.speakers.scholars.4.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">5. {t('proposal.eduTalk.speakers.scholars.4.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.4.position.3')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abduh_tuasikal.png" alt={t('proposal.eduTalk.speakers.scholars.5.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">6. {t('proposal.eduTalk.speakers.scholars.5.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.5.position.3')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/abu_yahya_badrussalam.png" alt={t('proposal.eduTalk.speakers.scholars.6.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">7. {t('proposal.eduTalk.speakers.scholars.6.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.6.position.3')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/raehanul_bahrain.png" alt={t('proposal.eduTalk.speakers.scholars.7.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">8. {t('proposal.eduTalk.speakers.scholars.7.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.7.position.3')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/khalid_basalamah.png" alt={t('proposal.eduTalk.speakers.scholars.8.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">9. {t('proposal.eduTalk.speakers.scholars.8.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.2')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.8.position.3')}</p>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transform transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex flex-col items-center text-center">
+                    <img src="/edunation/nuzul_dzikri.png" alt={t('proposal.eduTalk.speakers.scholars.9.name')} className="w-20 h-20 rounded-full shadow-md mb-4 object-cover" />
+                    <h4 className="font-semibold text-gray-800">10. {t('proposal.eduTalk.speakers.scholars.9.name')}</h4>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.0')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.1')}</p>
+                    <p className="text-gray-600 text-sm">{t('proposal.eduTalk.speakers.scholars.9.position.2')}</p>
+                  </div>
                 </div>
               </div>
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-800 mb-2">Keterangan Tambahan</h4>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Tier 1 (Title / Logo Tier 1): 90% dari lebar logo Edunation</li>
-                  <li>• Tier 2 (Main/Presenting / Logo Tier 2): 70% dari lebar logo Edunation</li>
-                  <li>• Tier 3 (Official / Logo Tier 3): 50% dari lebar logo Edunation</li>
-                  <li>• Tier 4 (Supporting / Logo Tier 4): 35% dari lebar logo Edunation</li>
+            </div>
+          </div>
+        </div>
+
+        {/* Institutional Matchmaking Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.institutionalMatchmaking.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.institutionalMatchmaking.subtitle')}</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl p-8 shadow-xl">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                <h3 className="text-xl font-bold mb-4">{t('proposal.institutionalMatchmaking.objectives.title')}</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.0')}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.1')}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.objectives.items.2')}</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                <h3 className="text-xl font-bold mb-4">{t('proposal.institutionalMatchmaking.benefits.title')}</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.0')}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.1')}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+                    <span>{t('proposal.institutionalMatchmaking.benefits.items.2')}</span>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Package Summary Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Package Summary</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <img src="/edunation/benefit_sponsor_1.png" alt="Benefit Sponsor 1" className="w-full h-auto rounded-lg mb-4" />
+        {/* Target Peserta Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.targetParticipants.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.targetParticipants.subtitle')}</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l9 5m-9-5v10" />
+                </svg>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <img src="/edunation/benefit_sponsor_2.png" alt="Benefit Sponsor 2" className="w-full h-auto rounded-lg mb-4" />
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.0.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.0.description')}</p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.1.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.1.description')}</p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.2.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.2.description')}</p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 text-center transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-gray-800 mb-2">{t('proposal.targetParticipants.categories.3.title')}</h3>
+              <p className="text-gray-600 text-sm">{t('proposal.targetParticipants.categories.3.description')}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Target Jumlah Pengunjung Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.targetVisitors.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.targetVisitors.subtitle')}</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-2xl p-8 shadow-xl">
+            <div className="text-center">
+              <div className="text-6xl font-bold mb-4">{t('proposal.targetVisitors.total')}</div>
+              <p className="text-xl">{t('proposal.targetVisitors.duration')}</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.0.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.0.day')}</p>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.1.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.1.day')}</p>
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-xl text-center">
+                <div className="text-3xl font-bold">{t('proposal.targetVisitors.daily.2.count')}</div>
+                <p>{t('proposal.targetVisitors.daily.2.day')}</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Layout Area Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">LAYOUT AREA</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <img src="/edunation/layout_area.png" alt="Layout Area" className="w-full h-auto rounded-lg shadow-md" />
-            </div>
+        {/* Timeline Section dengan visual yang menarik */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.timeline.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.timeline.subtitle')}</p>
           </div>
-
-          {/* Facility Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Facility</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-8 text-center">
-                <img src="/edunation/facility.png" alt="Facility" className="w-full max-w-2xl mx-auto h-auto rounded-lg shadow-md" />
+          
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-4 gap-0">
+              <div className="bg-gradient-to-b from-green-500 to-blue-500 text-white p-6 text-center">
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.0.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.0.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.0.period')}</p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">1. Fascia</h3>
-                  <p className="text-sm text-gray-600">Nama Exhibitor (max 30 kata) dengan stiker vinyl</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">2. Karpet</h3>
-                  <p className="text-sm text-gray-600">Karpet Abu-Abu dalam Booth</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">3. Lampu TL</h3>
-                  <p className="text-sm text-gray-600">Penerangan dalam Booth</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">4. Furnitur</h3>
-                  <p className="text-sm text-gray-600">1 Buah Meja & 2 Buah Kursi sebagai Meja Resepsionis Booth</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">5. Panel Booth</h3>
-                  <p className="text-sm text-gray-600">Panel Booth 3 sisi dengan R8. Jika Posisi Hook maka akan ada 2 sisi & 2 Fascia</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-800 mb-2">6. Listrik</h3>
-                  <p className="text-sm text-gray-600">Listrik 2A untuk kebutuhan standar listrik pameran</p>
-                </div>
+              
+              <div className="bg-gradient-to-b from-blue-500 to-purple-500 text-white p-6 text-center">
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.1.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.1.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.1.period')}</p>
+              </div>
+              
+              <div className="bg-gradient-to-b from-purple-500 to-pink-500 text-white p-6 text-center">
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.2.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.2.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.2.period')}</p>
+              </div>
+              
+              <div className="bg-gradient-to-b from-pink-500 to-red-500 text-white p-6 text-center">
+                <div className="text-4xl font-bold mb-2">{t('proposal.timeline.phases.3.number')}</div>
+                <h3 className="text-xl font-semibold">{t('proposal.timeline.phases.3.title')}</h3>
+                <p className="mt-2">{t('proposal.timeline.phases.3.period')}</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Secure Your Space Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">SECURE YOUR SPACE</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <img src="/edunation/pricing.png" alt="Pricing" className="w-full max-w-2xl mx-auto h-auto rounded-lg shadow-md" />
-            </div>
+        {/* Contact Section dengan form yang menarik */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.contactUs.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.contactUs.subtitle')}</p>
           </div>
-
-          {/* Contact Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Contact & Registration</h2>
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <p className="text-lg text-gray-700 mb-6 text-center">
-                📌 For sponsorship, exhibition, or partnership inquiries:
-              </p>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Adra</h3>
-                  <a href="tel:+6281318274233" className="text-green-600 hover:text-green-700 font-semibold">
-                    +62 813 1827 4233
-                  </a>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Abdurrahman</h3>
-                  <a href="tel:+6285893812675" className="text-green-600 hover:text-green-700 font-semibold">
-                    +62 858 9381 2675
-                  </a>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">YaaFi</h3>
-                  <a href="tel:+6281385116830" className="text-green-600 hover:text-green-700 font-semibold">
-                    +62 813 8511 6830
-                  </a>
+          
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 md:p-12">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('proposal.contactUs.contactInfo.title')}</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.phone.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.phone.number')}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.email.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.email.address')}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">{t('proposal.contactUs.contactInfo.address.label')}</h4>
+                      <p className="text-gray-600">{t('proposal.contactUs.contactInfo.address.location')}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="text-center mt-8">
-                <p className="text-2xl text-gray-800">✨ EduNationFest 2025 – Collaborating today, transforming education tomorrow. ✨</p>
+              
+              <div className="p-8 md:p-12">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">{t('proposal.contactUs.form.title')}</h3>
+                
+                <form className="space-y-4">
+                  <div>
+                    <label className="block text-gray-700 mb-2" htmlFor="name">{t('proposal.contactUs.form.fields.name.label')}</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      placeholder={t('proposal.contactUs.form.fields.name.placeholder')}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-gray-700 mb-2" htmlFor="email">{t('proposal.contactUs.form.fields.email.label')}</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      placeholder={t('proposal.contactUs.form.fields.email.placeholder')}
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-gray-700 mb-2" htmlFor="message">{t('proposal.contactUs.form.fields.message.label')}</label>
+                    <textarea 
+                      id="message" 
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      placeholder={t('proposal.contactUs.form.fields.message.placeholder')}
+                    ></textarea>
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    className="w-full bg-gradient-to-r from-green-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-600 transition-all transform hover:-translate-y-1"
+                  >
+                    {t('proposal.contactUs.form.button')}
+                  </button>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <Footer />
-    </main>
+    </section>
   );
 }

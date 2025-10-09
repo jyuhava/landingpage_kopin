@@ -15,7 +15,7 @@ interface EduNationFestData {
 }
 
 export default function EduNationFest() {
-  const { t, getData } = useLanguage();
+  const { language, t, getData } = useLanguage();
 
   // Get data from translation files instead of external JSON
   const getFestData = (): EduNationFestData | null => {
@@ -92,7 +92,7 @@ export default function EduNationFest() {
                   {t('eduNationFest.actions.aboutUs')}
                 </a>
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdiOkABEcG-42Pasv5Xht-XoDycWReOMOELYLtOgChFh40pXw/viewform"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf-9KQmex5Lzoda2asfK8g2vlmBlzO4s23aHskE9jVa6uilWA/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors text-center"

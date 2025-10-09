@@ -18,39 +18,83 @@ export default function ProposalEdunation() {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       {/* Hero Section dengan efek parallax */}
-      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         <div 
           className="absolute inset-0 bg-[url('https://kopinindonesia.org/foto_fgd_5.jpeg')] bg-cover bg-center bg-fixed"
           style={{ transform: 'translateZ(0)' }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-blue-900/70"></div>
         
-        <div className="relative z-10 text-center text-white max-w-4xl px-4">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium mb-4 border border-green-500/30">
-              {t('hero.declaration.badge')}
-            </span>
+        <div className="relative z-10 text-center text-white max-w-4xl px-4 py-8 md:py-0">
+          <div className="mb-6 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+            {/* Festival Logos dan Badge - Mobile Friendly Design */}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-4">
+              {/* Logo Container Mobile - Horizontal di atas badge */}
+              <div className="flex justify-center items-center gap-6 md:hidden mb-4">
+                <div className="flex-shrink-0">
+                  <img 
+                    src="/edunation/festival-logo.png" 
+                    alt="Festival Logo Left" 
+                    className="h-20 sm:h-24 w-auto object-contain max-w-[140px] sm:max-w-[160px] opacity-90"
+                  />
+                </div>
+                <div className="flex-shrink-0">
+                  <img 
+                    src="/edunation/festival-logo-right.png" 
+                    alt="Festival Logo Right" 
+                    className="h-20 sm:h-24 w-auto object-contain max-w-[140px] sm:max-w-[160px] opacity-90"
+                  />
+                </div>
+              </div>
+              
+              {/* Logo Kiri - Desktop Only */}
+              <div className="hidden md:flex flex-shrink-0">
+                <img 
+                  src="/edunation/festival-logo.png" 
+                  alt="Festival Logo Left" 
+                  className="h-20 lg:h-24 xl:h-28 w-auto object-contain max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] opacity-90"
+                />
+              </div>
+              
+              {/* Badge di tengah */}
+              <span className="inline-block px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 text-sm font-medium border border-green-500/30 text-center">
+                {t('hero.declaration.badge')}
+              </span>
+              
+              {/* Logo Kanan - Desktop Only */}
+              <div className="hidden md:flex flex-shrink-0">
+                <img 
+                  src="/edunation/festival-logo-right.png" 
+                  alt="Festival Logo Right" 
+                  className="h-20 lg:h-24 xl:h-28 w-auto object-contain max-w-[160px] lg:max-w-[180px] xl:max-w-[200px] opacity-90"
+                />
+              </div>
+            </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Proposal <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Edu Nation</span> Fest 2025
-          </h1>
           
-          <p className="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto leading-relaxed">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white">
+              Edu Nation Fest 2025
+            </span>
+          </h1>
+
+          
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 font-light max-w-3xl mx-auto leading-relaxed">
             "{t('hero.declaration.title')} {t('hero.declaration.titleSecondLine')}"
           </p>
           
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <p className="text-lg font-semibold">{t('eduNationFest.data.date')}</p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6 mt-8 md:mt-10">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 border border-white/20 w-full sm:w-auto">
+              <p className="text-sm md:text-lg font-semibold">{t('eduNationFest.data.date')}</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-              <p className="text-lg font-semibold">{t('eduNationFest.data.location')}</p>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 border border-white/20 w-full sm:w-auto">
+              <p className="text-sm md:text-lg font-semibold">{t('eduNationFest.data.location')}</p>
             </div>
           </div>
           
-          <div className="mt-12 animate-bounce">
-            <svg className="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div className="mt-8 md:mt-12 animate-bounce">
+            <svg className="w-5 h-5 md:w-6 md:h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
