@@ -383,46 +383,66 @@ export default function ProposalEdunation() {
               <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8 px-4">
+          <div className={`grid gap-8 px-4 ${t('lang') === 'ar' ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}> 
             {/* Target Peserta */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-blue-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-2xl p-8 flex flex-col items-center h-full border-2 border-blue-200 hover:shadow-blue-300 hover:-translate-y-2 transition-all duration-300"> 
               <div className="flex flex-col items-center w-full mb-4">
                 <div className="flex justify-center items-center w-14 h-14 bg-blue-100 rounded-full mb-2">
                   {/* Ikon User Group */}
                   <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z" /></svg>
                 </div>
-                <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold mt-1">
+                <span className="inline-block px-4 py-2 bg-blue-200 text-blue-800 rounded-full text-base font-bold shadow-md mt-1">
                   {t('proposal.competitionBox.targetTitle')}
                 </span>
               </div>
               <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.targetDesc')}</p>
             </div>
             {/* Tujuan Perlombaan */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-green-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-2xl p-8 flex flex-col items-center h-full border-2 border-green-200 hover:shadow-green-300 hover:-translate-y-2 transition-all duration-300"> 
               <div className="flex flex-col items-center w-full mb-4">
                 <div className="flex justify-center items-center w-14 h-14 bg-green-100 rounded-full mb-2">
                   {/* Ikon Target/Goal */}
                   <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" fill="none"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
                 </div>
-                <span className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold mt-1">
+                <span className="inline-block px-4 py-2 bg-green-200 text-green-800 rounded-full text-base font-bold shadow-md mt-1 text-center w-full">
                   {t('proposal.competitionBox.goalTitle')}
                 </span>
               </div>
               <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.goalDesc')}</p>
             </div>
             {/* Kategori Perlombaan */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center h-full border border-yellow-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-2xl p-8 flex flex-col items-center h-full border-2 border-yellow-200 hover:shadow-yellow-300 hover:-translate-y-2 transition-all duration-300"> 
               <div className="flex flex-col items-center w-full mb-4">
                 <div className="flex justify-center items-center w-14 h-14 bg-yellow-100 rounded-full mb-2">
                   {/* Ikon Trophy/Award */}
                   <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8M12 17v4M17 5V3a1 1 0 00-1-1H8a1 1 0 00-1 1v2M21 5a3 3 0 01-3 3c0 4-2 7-6 7s-6-3-6-7a3 3 0 01-3-3" /></svg>
                 </div>
-                <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold mt-1">
+                <span className="inline-block px-4 py-2 bg-yellow-200 text-yellow-800 rounded-full text-base font-bold shadow-md mt-1">
                   {t('proposal.competitionBox.categoryTitle')}
                 </span>
               </div>
               <p className="text-gray-700 text-sm text-justify">{t('proposal.competitionBox.categoryDesc')}</p>
             </div>
+
+            {/* Kolom Khusus Hadiah untuk Bahasa Arab */}
+            {t('lang') === 'ar' && (
+              <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl shadow-2xl p-8 flex flex-col items-center h-full border-2 border-orange-200 hover:shadow-orange-300 hover:-translate-y-2 transition-all duration-300">
+                <div className="flex flex-col items-center w-full mb-4">
+                  <div className="flex justify-center items-center w-16 h-16 bg-orange-100 rounded-full mb-2">
+                    {/* Ikon Medali Klasik */}
+                    <svg className="w-10 h-10 text-orange-500" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="20" r="12" fill="#fff" stroke="currentColor" strokeWidth="3"/>
+                      <path d="M24 32L18 44L24 40L30 44L24 32Z" fill="#fff" stroke="currentColor" strokeWidth="3" strokeLinejoin="round"/>
+                      <path d="M18 8L24 20L30 8" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <span className="inline-block px-4 py-2 bg-orange-200 text-orange-800 rounded-full text-base font-bold shadow-md mt-1">
+                    جوائز المسابقة
+                  </span>
+                </div>
+                <p className="text-gray-700 text-sm text-justify">رصدت إدارة معرض إدونيشن جوائز قيمة للفائزين يعلن عنها في حينها.</p>
+              </div>
+            )}
           </div>
         </div>
 
