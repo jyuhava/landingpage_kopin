@@ -449,6 +449,44 @@ export default function ProposalEdunation() {
           </div>
         </div>
 
+        {/* Active Participation Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+              {t('proposal.activeParticipation.title')}
+              <span className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></span>
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">{t('proposal.activeParticipation.subtitle')}</p>
+          </div>
+          
+          <div className="px-6">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:-translate-y-2">
+              {/* Gambar Judul */}
+              <div className="h-40 overflow-hidden">
+                <img src="/edunation/active_participation_title.png" alt="Active Participation Title" className="w-full h-full object-contain" />
+              </div>
+              
+              {/* Container untuk 2 gambar isi */}
+              <div className="flex">
+                {/* Gambar Kiri */}
+                <div className="flex-1 h-48 overflow-hidden -mr-1">
+                  <img src="/edunation/active_participation_left.png" alt="Active Participation Left" className="w-full h-full object-contain" />
+                </div>
+                
+                {/* Gambar Kanan */}
+                <div className="flex-1 h-48 overflow-hidden -ml-1">
+                  <img src="/edunation/active_participation_right.png" alt="Active Participation Right" className="w-full h-full object-contain" />
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">{t('proposal.activeParticipation.title')}</h3>
+                <p className="text-gray-600 text-center">{t('proposal.activeParticipation.subtitle')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* EduTalk Sections dengan tab navigation */}
         <div className="mb-20">
           <div className="text-center mb-12">
