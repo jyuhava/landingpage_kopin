@@ -701,6 +701,10 @@
     }
   },
   "proposal": {
+    "activeParticipation": {
+      "title": "Partisipasi Aktif",
+      "subtitle": "Dari Organisasi International Baccalaureate"
+    },
     "greetings": {
       "title": "GREETINGS",
       "subtitle": "Ustadz Dr. Ali Saman Hasan, Lc., L.LM., M.A",
